@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />		
+		<title></title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		
+		<div class="star_planet fullpage" data-3000="top:0%" data-4900="top:0%;background-position-y:0%" data-6300="top:0%;background-position-y:100%" data-7700="top:-100%">
+			<div class="spaceship absolute" data-3570="transform:scale(0) rotate(0deg)" data-3700="bottom:10%;transform:scale(1) rotate(1440deg)" data-6100="bottom:100%"></div>
+			<div class="hello_world" data-4500="opacity:0" data-6400="opacity:0.94"></div>
+			<section class="fullpage absolute">
+				<div class="clouds fullpage">
+					<div class="cloud_level_1 absolute fullpage"></div>
+					<div class="cloud_level_2 absolute fullpage"></div>
+					<div class="cloud_level_3 absolute fullpage"></div>
+				</div>
+				
+			
+			</section>
+			<section class="cloud_mirror fullpage absolute">
+				<div class="clouds fullpage">
+					<div class="cloud_level_1 absolute fullpage"></div>
+					<div class="cloud_level_2 absolute fullpage"></div>
+					<div class="cloud_level_3 absolute fullpage"></div>
+				</div>
+							
+			</section>
+		</div>
+		<section class="intro slide fullpage" data-0="top:0%" data-3000 ="top:-100%">
+			<div class="awardsright fullpage absolute z-150">
+				<h4>个人简历</h4>
+			</div>
+			<div class="awardsleft fullpage absolute z-150">
+				<h3>宋文凯</h3>
+			</div>							
+		</section>
+		
+		
+		
+		
+		<!--
+        	描述：secen2
+        -->
+		<section class="scence2 fullpage" data-6100="top:100%" data-7600="top:0%">
+			<div class="hill fullpage" data-7600="background-position-x:0%" data-12000="background-position-x:100%"></div>
+			
+		</section>
+		
+		
+		<!--
+        	描述：scence2_info
+        -->
+		<section class="scence2_info fullpage" data-6100="display:none" data-7600="display:block;" >
+			<div class="HTMLinfo absolute z-200"data-6500="transform:scale(0) rotate(0deg)" data-7700="left:20%;transform:scale(1) rotate(1440deg)" data-8000="left:-60%">
+				<div class="HTMLinfo_container">
+						<img src="img/Flat-Code-Icon-1024.jpg">
+						<div class="HTML_content">
+								
+							<div>									
+								<p>能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画</p>
+								<p>熟悉已标准化的 HTML5 / CSS3 新特性，实验项目中能尝试使用未广泛实现的新标准</p>
+							</div>
+							 
+						</div>			
+				</div>
+
+			</div>
+			
+			<div class="HTMLinfo absolute z-200" data-8000="transform:scale(0) rotate(0deg)" data-8500="left:20%;transform:scale(1) rotate(1440deg)" data-9000="left:-60%">
+				<div class="JSinfo_container HTMLinfo_container">
+						<img src="img/Flat-Code-Icon-1024.jpg">
+						<div class="JS_content HTML_content">								
+							<div>									
+								<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>
+								<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
+							</div>
+							 
+						</div>			
+				</div>
+
+			</div>
+		</section>
+		
+		<script type="text/javascript" src="js/skrollr.js" ></script>
+		<script type="text/javascript" src="js/zepto_1.1.3.js" ></script>
+		<script type="text/javascript" src="js/ratio.js" ></script>
+		<script type="text/javascript" src="js/mousemove.js" ></script>
+		<script type="text/javascript" src="js/star.js" ></script>
+		<script type="text/javascript" src="js/spaceinit.js" ></script>
+		<script type="text/javascript" src="js/animation.js" ></script>
+		<script type="text/javascript" src="js/interact.js" ></script>
+		<script>
+			 $.plug.spaceship({
+			 	container:document.querySelector('.spaceship'),
+			 	data_begin:3500,
+			 	data_end:4500,
+			 	speen:80
+			 	});
+			 	
+			 	$.plug.ratio(false,4500,1667,".hill")
+		</script>
+		<script>
+				
+			var s= skrollr.init();
+			 console.log(s.isMobile());
+			 if(s.isMobile()){
+			 	$.plug.ratio(true,1080,1920,".star_planet")
+			 	$.plug.star({
+			 		container:document.querySelector('.star_planet'),
+					bigstar:{
+						src:"./img/star_big.png",
+						number:10
+					},
+					midstar:{
+						src:"./img/star_mid.png",
+						number:20
+					}
+			 	});
+			 }
+			 else{
+			 	$.plug.ratio(false,2560,1600,".star_planet",1.3)
+			 	var stars=$.plug.star({container:document.querySelector('.star_planet')});
+			 	$.plug.reversemove({
+			 		dom:stars,
+			 		istranlate:true
+			 	});
+//			 	$.plug.reversemove({
+//			 		dom:".star_planet",
+//			 		istranlate:true,
+//			 		ratio:1,
+//			 		background_position:true,
+//			 		domrange:50
+//			 	})
+			 }
+		
+		</script>
+	</body>
+</html>
