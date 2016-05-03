@@ -8,7 +8,8 @@
 	</head>
 	<body>
 		
-		<div class="star_planet fullpage" data-3000="top:0%" data-4900="top:0%;background-position-y:0%" data-6300="top:0%;background-position-y:100%" data-7700="top:-100%">
+		<div class="star_planet fullpage" data-3000="top:0%" data-4900="top:0%;background-position-y:0%" data-6300="top:0%;background-position-y:100%" data-10000="top:-100%">
+			<div class="star_container fullpage absolute"></div>
 			<div class="spaceship absolute" data-3570="transform:scale(0) rotate(0deg)" data-3700="bottom:10%;transform:scale(1) rotate(1440deg)" data-6100="bottom:100%"></div>
 			<div class="hello_world" data-4500="opacity:0" data-6400="opacity:0.94"></div>
 			<section class="fullpage absolute">
@@ -44,8 +45,8 @@
 		<!--
         	描述：secen2
         -->
-		<section class="scence2 fullpage" data-6100="top:100%" data-7600="top:0%">
-			<div class="hill fullpage" data-7600="background-position-x:0%" data-12000="background-position-x:100%"></div>
+		<section class="scence2 fullpage" data-6100="top:100%" data-9100="top:0%">
+			<div class="hill fullpage" data-9100="background-position-x:0%" data-21000="background-position-x:100%"></div>
 			
 		</section>
 		
@@ -53,8 +54,8 @@
 		<!--
         	描述：scence2_info
         -->
-		<section class="scence2_info fullpage" data-6100="display:none" data-7600="display:block;" >
-			<div class="HTMLinfo absolute z-200"data-6500="transform:scale(0) rotate(0deg)" data-7700="left:20%;transform:scale(1) rotate(1440deg)" data-8000="left:-60%">
+		<section class="scence2_info fullpage z-200" data-start="">
+			<div class="HTMLinfo absolute z-200" data-9200="transform:scale(0) rotate(0deg)" data-13200="left:20%;transform:scale(1) rotate(1440deg)" data-16200="left:-60%">
 				<div class="HTMLinfo_container">
 						<img src="img/Flat-Code-Icon-1024.jpg">
 						<div class="HTML_content">
@@ -69,7 +70,7 @@
 
 			</div>
 			
-			<div class="HTMLinfo absolute z-200" data-8000="transform:scale(0) rotate(0deg)" data-8500="left:20%;transform:scale(1) rotate(1440deg)" data-9000="left:-60%">
+			<div class="HTMLinfo absolute z-200" data-emit-events data-16300="transform:scale(0) rotate(0deg)" data-19300="left:20%;transform:scale(1) rotate(1440deg)" data-22300="left:-60%">
 				<div class="JSinfo_container HTMLinfo_container">
 						<img src="img/Flat-Code-Icon-1024.jpg">
 						<div class="JS_content HTML_content">								
@@ -101,15 +102,31 @@
 			 	});
 			 	
 			 	$.plug.ratio(false,4500,1667,".hill")
+			 	var hided_element=['.star_container','.hello_world'];
 		</script>
 		<script>
 				
-			var s= skrollr.init();
+			var s= skrollr.init({					
+				keyframe: function(element, name, direction) {
+        			console.log(name,direction)
+        			
+        				for(var i=0;i<hided_element.length;i++){
+        					if(name==="data8000"&&direction==="down"){
+        						$(hided_element[i]).hide();
+        					}
+        					if(name==="data8000"&&direction==="up"){
+        						$(hided_element[i]).show();
+        					}
+        				}
+        			
+        			
+    			}
+			});
 			 console.log(s.isMobile());
 			 if(s.isMobile()){
 			 	$.plug.ratio(true,1080,1920,".star_planet")
 			 	$.plug.star({
-			 		container:document.querySelector('.star_planet'),
+			 		container:document.querySelector('.star_container'),
 					bigstar:{
 						src:"./img/star_big.png",
 						number:10
@@ -122,7 +139,7 @@
 			 }
 			 else{
 			 	$.plug.ratio(false,2560,1600,".star_planet",1.3)
-			 	var stars=$.plug.star({container:document.querySelector('.star_planet')});
+			 	var stars=$.plug.star({container:document.querySelector('.star_container')});
 			 	$.plug.reversemove({
 			 		dom:stars,
 			 		istranlate:true

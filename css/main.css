@@ -32,9 +32,7 @@ html,body{
 	z-index: 1;
 }
 .skrollr-mobile .skrollable {
-	/*
-		May cause issues on Android default browser (see #331 on GitHub).
-	*/
+	
 	position:absolute;
 	
 }
@@ -65,9 +63,7 @@ html,body{
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    
-    
+    transform: rotate(-45deg);        
  	-webkit-transform-origin: bottom left;
  	transform-origin: bottom left; 
 }
@@ -112,8 +108,7 @@ html,body{
 }
 
 .star{
-	position: absolute;
-	
+	position: absolute;	
 }
 
 
@@ -256,7 +251,7 @@ animation-direction:alternate;
 	padding: 10px;
 }
 .scence2_info.fullpage{
-	 
+	 bottom:0;
 }
 
 /*mobile*/
@@ -306,7 +301,7 @@ animation-direction:alternate;
 	overflow: hidden;
 }
 .HTMLinfo_container .HTML_content p{
-	display: inline-block;
+	display: block;
     margin: 0 0 0.25em;
     padding: 0.4em 1em;
     background: rgba(255,255,255,0.9);
