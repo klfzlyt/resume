@@ -179,11 +179,21 @@ animation-direction:alternate;
  
 .clouds{
 	height: 250px;
-	width: 100%;
+	width: 120%;
+	left:-10%;
 	position: absolute;
 	top: 100%;
 }
-
+.cloud_vertical{
+	
+	top:0 !important;
+	transform: scaleY(2) rotateZ(90deg);
+	-moz-transform: scaleY(2) rotateZ(90deg);
+	-webkit-transform: scaleY(2) rotateZ(90deg);
+	transform-origin: left top;
+	-webkit-transform-origin: left top;
+	-moz-transform-origin: left top;
+}
 .cloud_mirror{
 	transform: scaleY(-1);
 	-webkit-transform: scaleY(-1);
@@ -233,12 +243,118 @@ animation-direction:alternate;
 	}
 }
 
+
+/*cloud 1*/
+@-moz-keyframes cloudmove_1{
+	from{
+		-moz-transform: translateX(-10px);}
+	to{
+		-moz-transform: translateX(10px);
+	}
+}
+@-webkit-keyframes cloudmove_1{
+	from{
+		-webkit-transform: translateX(-10px);
+	}
+	to{
+		-webkit-transform: translateX(10px);
+	}
+}
+@keyframes cloudmove_1{
+	from{
+		transform: translateX(-10px);
+	}
+	to{
+		transform: translateX(10px);
+	}
+}
+.cloud_move_animation_1{
+	animation: cloudmove_1 1s infinite;
+	-moz-animation: cloudmove_1 1s infinite;
+	-webkit-animation: cloudmove_1 1s infinite;
+	
+animation-direction:alternate;
+-webkit-animation-direction:alternate;	
+-moz-animation-direction: alternate;
+}
+
+/*cloud 2*/
+@-moz-keyframes cloudmove_2{
+	from{
+		-moz-transform: translateX(-15px);}
+	to{
+		-moz-transform: translateX(15px);
+	}
+}
+@-webkit-keyframes cloudmove_2{
+	from{
+		-webkit-transform: translateX(-15px);
+	}
+	to{
+		-webkit-transform: translateX(15px);
+	}
+}
+@keyframes cloudmove_2{
+	from{
+		transform: translateX(-15px);
+	}
+	to{
+		transform: translateX(15px);
+	}
+}
+.cloud_move_animation_2{
+	animation: cloudmove_2 1s infinite;
+	-moz-animation: cloudmove_2 1s infinite;
+	-webkit-animation: cloudmove_2 1s infinite;
+	
+animation-direction:alternate;
+-webkit-animation-direction:alternate;	
+-moz-animation-direction: alternate;
+}
+
+/*cloud3*/
+
+@-moz-keyframes cloudmove_3{
+	from{
+		-moz-transform: translateX(-20px);}
+	to{
+		-moz-transform: translateX(20px);
+	}
+}
+@-webkit-keyframes cloudmove_3{
+	from{
+		-webkit-transform: translateX(-20px);
+	}
+	to{
+		-webkit-transform: translateX(20px);
+	}
+}
+@keyframes cloudmove_3{
+	from{
+		transform: translateX(-20px);
+	}
+	to{
+		transform: translateX(20px);
+	}
+}
+.cloud_move_animation_3{
+	animation: cloudmove_3 1s infinite;
+	-moz-animation: cloudmove_3 1s infinite;
+	-webkit-animation: cloudmove_3 1s infinite;
+	
+animation-direction:alternate;
+-webkit-animation-direction:alternate;	
+-moz-animation-direction: alternate;
+}
+
+
+
 /*scene2*/
 .scence2{
 	z-index: 0 !important;
 }
 .hill{
-	background: url(../img/scence2_bg.jpg) no-repeat 0 0;
+	background: url(../img/scence2_bg.png) no-repeat 0 0;
 }
 .HTMLinfo{
 	text-align: center;
@@ -344,6 +460,12 @@ animation-direction:alternate;
 	z-index: 0 !important;
 }
 .scence3_bg{
-background: url(../img/flat-mountains.jpg) no-repeat 0 0;	
+background: url(../img/flat-mountains.png) no-repeat 0 0;	
 }
-
+.scence3 .plane{
+	background: url(../img/plane.png) no-repeat 0 0;
+	background-size: 100%;
+	width: 100%;
+	height: 200px;
+	top:20%
+}

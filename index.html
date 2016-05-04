@@ -35,17 +35,17 @@
                     	描述：下方云朵
                     -->
 					<section class="fullpage absolute">					 
-							<div class="cloud_level_3 absolute fullpage"></div>
-							<div class="cloud_level_2 absolute fullpage"></div>
-							<div class="cloud_level_1 absolute fullpage"></div>					 				
+							<div class="cloud_level_3 cloud_move_animation_3 absolute fullpage"></div>
+							<div class="cloud_level_2  cloud_move_animation_2 absolute fullpage"></div>
+							<div class="cloud_level_1  cloud_move_animation_1 absolute fullpage"></div>					 				
 					</section>
 					<!--                    	                    
                     	描述：上方云朵
                     -->
 					<section class="cloud_mirror fullpage absolute">
-							<div class="cloud_level_3 absolute fullpage"></div>
-							<div class="cloud_level_2 absolute fullpage"></div>
-							<div class="cloud_level_1 absolute fullpage"></div>					 				
+							<div class="cloud_level_3 cloud_move_animation_3 absolute fullpage"></div>
+							<div class="cloud_level_2 cloud_move_animation_2 absolute fullpage"></div>
+							<div class="cloud_level_1 cloud_move_animation_1 absolute fullpage"></div>					 				
 					</section>
 				</div>
 			</section>
@@ -120,8 +120,16 @@
         	描述：场景3
         -->
 		<section class="scence3 fullpage" data-36000="transform:translate3d(100%,0%,0)" data-40000="transform:translate3d(0%,0%,0)">
-			<div class="fullpage scence3_bg"></div>
+			<!--            	
+            	描述：场景3背景
+            -->
+			<div class="fullpage scence3_bg" data-41000="background-position-x:0%" data-55000="background-position-x:100%"></div>
 			
+			<!--            	
+            	描述：飞机
+            -->
+			<div class="plane" data-40000="display:none;transform:translate3d(-100%,0%,0)" data-41000="display:block" data-43000="transform:translate3d(100%,0%,0)"></div>
+
 		</section>
 	
 		
