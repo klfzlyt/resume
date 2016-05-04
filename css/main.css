@@ -34,7 +34,12 @@ html,body{
 .skrollr-mobile .skrollable {
 	
 	position:absolute;
+	z-index: 1;
+}
+.skrollr-mobile .fixed {
 	
+	position:absolute;
+	z-index: 1;
 }
 .skrollable .skrollable{
 	position: absolute;
@@ -53,6 +58,9 @@ html,body{
 }
 
 /*scene1*/
+.scence1{
+z-index: 1 !important;	
+}
 .awardsleft{
 	height: 100%;
 	width: 100%;	
@@ -96,14 +104,14 @@ html,body{
 .star_planet{
 	background: url(../img/phone_planet.jpg) no-repeat 0 0;
 	background-position: 0px 0px;
-	z-index: 1;
+	 
 }
 @media only screen and (min-width: 768px) {
 	.star_planet{
 		background: url(../img/rocket.png) no-repeat 0 0;		
 		background-position: -50px -30px;
 		background-size: 120%;
-		z-index: 1;
+	 
 	}
 }
 
@@ -168,12 +176,14 @@ animation-direction:alternate;
 	}
 	
 }
-.star_planet section{
+ 
+.clouds{
+	height: 250px;
+	width: 100%;
+	position: absolute;
 	top: 100%;
 }
-.clouds,.cloud_mirror{
-	z-index: 1;
-}
+
 .cloud_mirror{
 	transform: scaleY(-1);
 	-webkit-transform: scaleY(-1);
@@ -183,18 +193,15 @@ animation-direction:alternate;
 	-moz-transform-origin: top;
 }
 .clouds .cloud_level_1{
-	background: url(../img/bg_cloud-level1.png) repeat-x 0 0;
-	z-index: 100;
+	background: url(../img/bg_cloud-level1.png) repeat-x 0 0;	 
 	background-size:100%;
 }
 .clouds .cloud_level_2{
-	background: url(../img/bg_cloud-level2.png) repeat-x 0 0;
-	z-index: 50;
+	background: url(../img/bg_cloud-level2.png) repeat-x 0 0;	 
 	background-size: 100%;
 }
 .clouds .cloud_level_3{
-	background: url(../img/bg_cloud-level3.png) repeat-x 0 0;
-	z-index: 25;	
+	background: url(../img/bg_cloud-level3.png) repeat-x 0 0;	 
 	background-size: 100%;
 }
 .star_planet .hello_world{
@@ -202,9 +209,8 @@ animation-direction:alternate;
 	height: 120px;
 	width: 250px;
 	bottom: 0%;
-	position: relative;	
-	margin: 0 auto;
-	
+	position: relative !important;	
+	margin: 0 auto;	
 }
 @media only screen and (min-width:768px ) {
 	.hello_world{
@@ -212,36 +218,36 @@ animation-direction:alternate;
 	}
 	.clouds .cloud_level_1{
 		background: url(../img/bg_cloud-level1.png) repeat-x 0 0;
-		z-index: 100;
+		 
 		 
 	}
 	.clouds .cloud_level_2{
 		background: url(../img/bg_cloud-level2.png) repeat-x 0 0;
-		z-index: 50;
+	 
 	 
 	}
 	.clouds .cloud_level_3{
 		background: url(../img/bg_cloud-level3.png) repeat-x 0 0;
-		z-index: 25;	
+		 
 	 
 	}
 }
 
 /*scene2*/
 .scence2{
-	z-index: 0;
+	z-index: 0 !important;
 }
 .hill{
 	background: url(../img/scence2_bg.jpg) no-repeat 0 0;
 }
 .HTMLinfo{
 	text-align: center;
-	line-height: 1.4;
-	width: 60%;	
-	left:20%;	
-	
-	z-index: 200;
-	cursor:pointer;
+	line-height: 1.4;	 
+	left:0;
+ 	transform-origin: center;
+ 	-webkit-transform-origin:center;
+ 	position: absolute;
+ 	cursor:pointer;
 	bottom: 0;	
 	color: white;
 	/*border: 1px solid black;
@@ -257,8 +263,8 @@ animation-direction:alternate;
 /*mobile*/
 @media only screen and (max-width: 768px) {
 	.HTMLinfo{
-		bottom: inherit;
-		top:0%;
+		bottom: initial;
+		top:10%
 	}
 }
 
@@ -275,20 +281,39 @@ animation-direction:alternate;
 	margin: 0 auto;
 }
 .HTMLinfo_container img{
-	width: 126px;
+	width: 160px;
 	box-sizing: border-box;
 	display: block;	
     -webkit-transition: opacity 1s, -webkit-transform 1s;
     transition: opacity 1s, transform 1s;
 	 
 }
- 
-.HTMLinfo_container:hover img{
-	opacity: 0.4;
-	-webkit-transform: translateX(10px);
-	transform: translateX(50px);
-    
-}
+ @media only screen and (min-width:768px ) {
+	 	.HTMLinfo_container:hover img{
+			opacity: 0.4;
+			/*-webkit-transform: translateX(10px);
+			transform: translateX(50px);*/
+	    
+		}
+		.HTMLinfo_container:hover .HTML_content p{
+		    opacity: 1;
+		    -webkit-transform: translate3d(0,0,0);
+		    transform: translate3d(0,0,0);
+		}
+		.HTMLinfo_container .HTML_content p{
+		   -webkit-transform: translate3d(-760px,0,0);
+   			 transform: translate3d(-760px,0,0);
+   		}
+   		.HTMLinfo_container img{
+   			width: 210px;
+   		}
+   		.HTMLinfo_container .HTML_content p{
+   			
+   			 
+    			padding: 0.4em 1em;
+   		}
+ }
+
 .HTMLinfo_container .HTML_content{
 	text-align: left;
 	position: absolute;
@@ -302,8 +327,7 @@ animation-direction:alternate;
 }
 .HTMLinfo_container .HTML_content p{
 	display: block;
-    margin: 0 0 0.25em;
-    padding: 0.4em 1em;
+   margin: 0 0 0.25em;
     background: rgba(255,255,255,0.9);
     color: #2f3238;
     text-transform: none;
@@ -311,11 +335,15 @@ animation-direction:alternate;
     font-size: 75%;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-760px,0,0);
-    transform: translate3d(-760px,0,0);
+ 
 }
-.HTMLinfo_container:hover .HTML_content p{
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+
+
+/*场景3*/
+.scence3{
+	z-index: 0 !important;
 }
+.scence3_bg{
+background: url(../img/flat-mountains.jpg) no-repeat 0 0;	
+}
+

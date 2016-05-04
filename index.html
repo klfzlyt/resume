@@ -7,83 +7,123 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
-		
-		<div class="star_planet fullpage" data-3000="top:0%" data-4900="top:0%;background-position-y:0%" data-6300="top:0%;background-position-y:100%" data-10000="top:-100%">
-			<div class="star_container fullpage absolute"></div>
-			<div class="spaceship absolute" data-3570="transform:scale(0) rotate(0deg)" data-3700="bottom:10%;transform:scale(1) rotate(1440deg)" data-6100="bottom:100%"></div>
-			<div class="hello_world" data-4500="opacity:0" data-6400="opacity:0.94"></div>
-			<section class="fullpage absolute">
-				<div class="clouds fullpage">
-					<div class="cloud_level_1 absolute fullpage"></div>
-					<div class="cloud_level_2 absolute fullpage"></div>
-					<div class="cloud_level_3 absolute fullpage"></div>
+		<!--        	        	
+        	描述：场景1
+        -->
+		<section class="scence1 fullpage" data-6300="transform:translate3d(0,0%,0)"  data-10000="transform:translate3d(0,-100%,0)">
+			<!--            	
+            	描述：星球
+            -->
+			<section class="star_planet fullpage" data-4900="background-position-y:0%" data-6300="background-position-y:100%">
+				<!--
+                	描述：星星
+                -->
+				<div class="star_container fullpage absolute"></div>
+				<!--                
+                	描述：飞船
+                -->
+				<div class="spaceship absolute" data-3570="transform:scale(0) rotate(0deg)" data-3700="bottom:10%;transform:scale(1) rotate(1440deg)" data-6100="bottom:100%"></div>
+				<!--                	
+                	描述：hello world
+                -->
+				<div class="hello_world" data-4500="opacity:0" data-6400="opacity:0.94"></div>
+				<!--                	
+                	描述：云朵
+                -->
+				<div class="clouds">
+					<!--                    	
+                    	描述：下方云朵
+                    -->
+					<section class="fullpage absolute">					 
+							<div class="cloud_level_3 absolute fullpage"></div>
+							<div class="cloud_level_2 absolute fullpage"></div>
+							<div class="cloud_level_1 absolute fullpage"></div>					 				
+					</section>
+					<!--                    	                    
+                    	描述：上方云朵
+                    -->
+					<section class="cloud_mirror fullpage absolute">
+							<div class="cloud_level_3 absolute fullpage"></div>
+							<div class="cloud_level_2 absolute fullpage"></div>
+							<div class="cloud_level_1 absolute fullpage"></div>					 				
+					</section>
 				</div>
-				
-			
 			</section>
-			<section class="cloud_mirror fullpage absolute">
-				<div class="clouds fullpage">
-					<div class="cloud_level_1 absolute fullpage"></div>
-					<div class="cloud_level_2 absolute fullpage"></div>
-					<div class="cloud_level_3 absolute fullpage"></div>
+			<!--            	
+            	描述：个人介绍
+            -->
+			<section class="intro slide fullpage" data-0="transform:translate3d(0,0%,0)" data-3000 ="transform:translate3d(0,-100%,0)">
+				<!--                	
+                	描述：右边
+                -->
+				<div class="awardsright fullpage absolute">
+					<h4>个人简历</h4>
 				</div>
-							
+				<!--                	
+                	描述：左边
+                -->
+				<div class="awardsleft fullpage absolute">
+					<h3>宋文凯</h3>
+				</div>							
 			</section>
-		</div>
-		<section class="intro slide fullpage" data-0="top:0%" data-3000 ="top:-100%">
-			<div class="awardsright fullpage absolute z-150">
-				<h4>个人简历</h4>
-			</div>
-			<div class="awardsleft fullpage absolute z-150">
-				<h3>宋文凯</h3>
-			</div>							
 		</section>
-		
 		
 		
 		
 		<!--
-        	描述：secen2
+        	描述：场景2
         -->
-		<section class="scence2 fullpage" data-6100="top:100%" data-9100="top:0%">
-			<div class="hill fullpage" data-9100="background-position-x:0%" data-21000="background-position-x:100%"></div>
-			
+		<section class="scence2 fullpage" data-6100="transform:translate3d(0,100%,0)" data-9100="transform:translate3d(0,0%,0)" data-36000="transform:translate3d(0%,0%,0)" data-40000="transform:translate3d(-100%,0%,0)">
+			<!--            	
+            	描述：背景
+            -->
+			<div class="hill fullpage" data-9100="background-position-x:0%" data-35000="background-position-x:100%"></div>
+				<!--
+	        	描述：场景2信息
+	       		 -->
+			<section class="scence2_info fullpage">
+				<!--                	
+                	描述：第一个技能
+                -->
+				<div class="HTMLinfo absolute" data-9400="transform:scale3d(0,0,0) rotateZ(0deg) translateX(0)" data-14200="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)" data-16200="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)" data-19200="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(-600%)">
+					<div class="HTMLinfo_container">
+							<img src="img/Flat-Code-Icon-1024.jpg">
+							<div class="HTML_content">
+									
+								<div>									
+									<p>能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画</p>
+									<p>熟悉已标准化的 HTML5 / CSS3 新特性</p>
+								</div>
+								 
+							</div>			
+					</div>	
+				</div>
+				<!--                	
+                	描述：第二个技能
+                -->
+				<div class="HTMLinfo absolute" data-emit-events data-21300="transform:scale3d(0,0,0) rotateZ(0deg) translateX(0)" data-25300="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)" data-27300="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)"  data-30300="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(-600%)">
+					<div class="JSinfo_container HTMLinfo_container">
+							<img src="img/Flat-Code-Icon-1024.jpg">
+							<div class="JS_content HTML_content">								
+								<div>									
+									<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>
+									<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
+								</div>								
+							</div>			
+					</div>	
+				</div>
+			</section>
 		</section>
 		
 		
 		<!--
-        	描述：scence2_info
+        	描述：场景3
         -->
-		<section class="scence2_info fullpage z-200" data-start="">
-			<div class="HTMLinfo absolute z-200" data-9200="transform:scale(0) rotate(0deg)" data-13200="left:20%;transform:scale(1) rotate(1440deg)" data-16200="left:-60%">
-				<div class="HTMLinfo_container">
-						<img src="img/Flat-Code-Icon-1024.jpg">
-						<div class="HTML_content">
-								
-							<div>									
-								<p>能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画</p>
-								<p>熟悉已标准化的 HTML5 / CSS3 新特性，实验项目中能尝试使用未广泛实现的新标准</p>
-							</div>
-							 
-						</div>			
-				</div>
-
-			</div>
+		<section class="scence3 fullpage" data-36000="transform:translate3d(100%,0%,0)" data-40000="transform:translate3d(0%,0%,0)">
+			<div class="fullpage scence3_bg"></div>
 			
-			<div class="HTMLinfo absolute z-200" data-emit-events data-16300="transform:scale(0) rotate(0deg)" data-19300="left:20%;transform:scale(1) rotate(1440deg)" data-22300="left:-60%">
-				<div class="JSinfo_container HTMLinfo_container">
-						<img src="img/Flat-Code-Icon-1024.jpg">
-						<div class="JS_content HTML_content">								
-							<div>									
-								<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>
-								<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
-							</div>
-							 
-						</div>			
-				</div>
-
-			</div>
 		</section>
+	
 		
 		<script type="text/javascript" src="js/skrollr.js" ></script>
 		<script type="text/javascript" src="js/zepto_1.1.3.js" ></script>
@@ -101,7 +141,8 @@
 			 	speen:80
 			 	});
 			 	
-			 	$.plug.ratio(false,4500,1667,".hill")
+			 	$.plug.ratio(false,4500,1667,".hill");
+			 	$.plug.ratio(false,3840,2160,".scence3_bg",1.3)
 			 	var hided_element=['.star_container','.hello_world'];
 		</script>
 		<script>
@@ -125,25 +166,25 @@
 			 console.log(s.isMobile());
 			 if(s.isMobile()){
 			 	$.plug.ratio(true,1080,1920,".star_planet")
-			 	$.plug.star({
-			 		container:document.querySelector('.star_container'),
-					bigstar:{
-						src:"./img/star_big.png",
-						number:10
-					},
-					midstar:{
-						src:"./img/star_mid.png",
-						number:20
-					}
-			 	});
+//			 	$.plug.star({
+//			 		container:document.querySelector('.star_container'),
+//					bigstar:{
+//						src:"./img/star_big.png",
+//						number:10
+//					},
+//					midstar:{
+//						src:"./img/star_mid.png",
+//						number:20
+//					}
+//			 	});
 			 }
 			 else{
 			 	$.plug.ratio(false,2560,1600,".star_planet",1.3)
-			 	var stars=$.plug.star({container:document.querySelector('.star_container')});
-			 	$.plug.reversemove({
-			 		dom:stars,
-			 		istranlate:true
-			 	});
+//			 	var stars=$.plug.star({container:document.querySelector('.star_container')});
+//			 	$.plug.reversemove({
+//			 		dom:stars,
+//			 		istranlate:true
+//			 	});
 //			 	$.plug.reversemove({
 //			 		dom:".star_planet",
 //			 		istranlate:true,
