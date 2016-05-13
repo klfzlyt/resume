@@ -109,9 +109,7 @@ z-index: 1 !important;
 @media only screen and (min-width: 768px) {
 	.star_planet{
 		background: url(../img/rocket.png) no-repeat 0 0;		
-		background-position: -50px -30px;
-		background-size: 120%;
-	 
+ 
 	}
 }
 
