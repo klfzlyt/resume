@@ -9,12 +9,12 @@
 		
 		
 	});
-	$html=$('.HTMLinfo');
-	$width=$('.HTMLinfo_container img').width()+20;
+	//$html=$('.HTMLinfo');
+	$width=$('.ballon3div').width();
 	var left=Math.round((window.innerWidth-$width)/2)
-	$('.HTMLinfo').css({left:left+'px'})
+	$('.ballon3div').css({left:left+'px'})
 	
-	
+	 
 	
 	
 })($)

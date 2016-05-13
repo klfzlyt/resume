@@ -7,10 +7,25 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
+		<!--            	
+	    	描述：信息(单独一层)
+	    -->
+		<div class="fullpage infomation" data-20000="transform:translate(-100%,0%)"  data-23000="transform:translate(0%,0%)" data-25000="transform:translate(0%,0%)"  data-27000="transform:translate(0%,-100%)">
+			<div class="info1" data-23000="transform:translateY(100%)" data-24000="transform:translateY(0%)">
+					<p>能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画</p>
+					<p>熟悉已标准化的 HTML5 / CSS3 新特性</p>
+			</div>
+			<div class="info2" data-24000="transform:translateY(100%)" data-25000="transform:translateY(50%)">					
+					<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>
+					<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
+			</div>
+			
+			
+		</div>
 		<!--        	        	
         	描述：场景1
         -->
-		<section class="scence1 fullpage" data-6300="transform:translate3d(0,0%,0)"  data-10000="transform:translate3d(0,-100%,0)">
+		<section class="scence1 fullpage" data-6300="transform:translate3d(0,0%,0)"  data-10000="transform:translate3d(0,-100%,0)" data-30000="transform:translate3d(0,-100%,0)" data-33000="transform:translate3d(0,-130%,0)">
 			<!--            	
             	描述：星球
             -->
@@ -73,19 +88,45 @@
 		<!--
         	描述：场景2
         -->
-		<section class="scence2 fullpage" data-6100="transform:translate3d(0,100%,0)" data-9100="transform:translate3d(0,0%,0)" data-36000="transform:translate3d(0%,0%,0)" data-40000="transform:translate3d(-100%,0%,0)">
+		<section class="scence2 fullpage" data-6100="transform:translate3d(0,100%,0)" data-9100="transform:translate3d(0,0%,0);" data-26000="transform:translate3d(0%,0%,0)"  data-30000="transform:translate3d(0%,-98%,0)">
+
+			<!--        	
+        	描述：枪兵
+        	-->
+        	<div class="fullpage marinewrap" data-0="display:none" data-10100="display:block;transform:translateX(-100%)"  data-20000="transform:translateX(0%);opacity:1"  data-22000="opacity:0">
+				<img class="marine"  src="img/watermelon_walker.gif"></img>
+			</div>
+			<!--                	
+            	描述：气球1
+            -->
+            <div class="fullpage ballonwrap"  data-11500="transform:translateY(100%)" data-14500="transform:translateY(-100%)">
+				<img class="ballon" src="img/ballon.png"></img>
+			</div>
+			<!--                	
+            	描述：气球2
+            -->
+            <div class="fullpage ballon2wrap" data-16000="transform:translateY(100%)" data-18500="transform:translateY(-100%)">
+				<img class="ballon2" src="img/ballon2.png"></img>
+			</div>	
+			<!--            	            	
+            	描述：气球3
+            -->
+            <div class="fullpage ballon3wrap" data-25000="transform:translateY(-100%) scale(1)" data-28000="transform:translateY(0%) scale(1)" data-32500="transform:translateY(100%) scale(1)" data-33500="transform:translateY(100%) scale(1)" data-35000="transform:translateY(100%) scale(0)">
+	            <div class="ballon3div absolute">
+					<img  class="ballon3" src="img/ballon3.png" />
+					<img class="marine_center" src="img/watermelon.png" data-0="display:none" data-26000="display:block;opacity:0" data-28000="opacity:1;"  ></img>
+				</div>
+			</div>
 			<!--            	
             	描述：背景
             -->
-			<div class="hill fullpage" data-9100="background-position-x:0%" data-35000="background-position-x:100%"></div>
-				<!--
-	        	描述：场景2信息
-	       		 -->
-			<section class="scence2_info fullpage">
-				<!--                	
-                	描述：第一个技能
-                -->
-				<div class="HTMLinfo absolute" data-9400="transform:scale3d(0,0,0) rotateZ(0deg) translateX(0)" data-14200="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)" data-16200="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)" data-19200="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(-600%)">
+			<div class="hill fullpage" data-9100="background-position-x:0%" data-20000="background-position-x:100%"></div>
+			<!--
+	                        描述：场景2信息
+	       	 -->
+			<!--<section class="scence2_info">
+			 
+				<div class="HTMLinfo absolute" data-15000=" transform:translateX(250%)" data-20000="transform:translateX(0%)" data-21000="transform:translateX(0%)" data-23000="transform:translateX(-100%)">
 					<div class="HTMLinfo_container">
 							<img src="img/Flat-Code-Icon-1024.jpg">
 							<div class="HTML_content">
@@ -98,12 +139,10 @@
 							</div>			
 					</div>	
 				</div>
-				<!--                	
-                	描述：第二个技能
-                -->
-				<div class="HTMLinfo absolute" data-emit-events data-21300="transform:scale3d(0,0,0) rotateZ(0deg) translateX(0)" data-25300="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)" data-27300="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(0%)"  data-30300="transform:scale3d(1,1,1) rotateZ(1440deg) translateX(-600%)">
+			 
+				<div class="HTMLinfo absolute" data-emit-events data-23300="transform:scale3d(0,0,0) translateX(0)" data-25300="transform:scale3d(1,1,1) translateX(0%)" data-27300="transform:scale3d(1,1,1) translateX(0%)"  data-30300="transform:scale3d(0,0,0) translateX(0%)">
 					<div class="JSinfo_container HTMLinfo_container">
-							<img src="img/Flat-Code-Icon-1024.jpg">
+							<img src="img/htmlinfo.jpg">
 							<div class="JS_content HTML_content">								
 								<div>									
 									<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>
@@ -112,24 +151,34 @@
 							</div>			
 					</div>	
 				</div>
-			</section>
+				
+			
+			</section>-->
+		
 		</section>
 		
 		
 		<!--
         	描述：场景3
         -->
-		<section class="scence3 fullpage" data-36000="transform:translate3d(100%,0%,0)" data-40000="transform:translate3d(0%,0%,0)">
+		<section class="scence3 fullpage" data-26000="transform:translate3d(0%,98%,0)" data-30000="transform:translate3d(0%,0%,0)">
 			<!--            	
             	描述：场景3背景
             -->
-			<div class="fullpage scence3_bg" data-41000="background-position-x:0%" data-55000="background-position-x:100%"></div>
+			<div class="fullpage scence3_bg" data-31000="background-position-x:0%" data-45000="background-position-x:100%"></div>
 			
 			<!--            	
             	描述：飞机
             -->
-			<div class="plane" data-40000="display:none;transform:translate3d(-100%,0%,0)" data-41000="display:block" data-43000="transform:translate3d(100%,0%,0)"></div>
-
+            <div class="fullpage" data-30000="transform:translate3d(-100%,0%,0)"  data-39000="transform:translate3d(100%,0%,0)">
+				<img class="plane" src="img/plane.png" ></img>
+			</div>
+			<!--
+            	描述：鸟
+            -->
+            <div class="fullpage"  data-36000="transform:translate3d(-100%,0%,0)"  data-43000="transform:translate3d(100%,0%,0)">
+				<img class="bird" src="img/bird1.gif" />
+			</div>
 		</section>
 	
 		
@@ -152,6 +201,33 @@
 			 	$.plug.ratio(false,4500,1667,".hill");
 			 	$.plug.ratio(false,3840,2160,".scence3_bg",1.3)
 			 	var hided_element=['.star_container','.hello_world'];
+			 	/*
+			 	 * animation
+			 	 */
+//			 	var marine=$.plug.animate(500,".marine",8,-100);
+// 				var num_for_scroll=0;
+//				var pre_num=0;
+//				setInterval(function(){
+//					if(num_for_scroll===pre_num)marine.stop();
+//				},1500);
+//				$(document).bind("scroll",function(){
+//					num_for_scroll++;
+//					if(!marine.animating()){marine.resume();}
+//					pre_num=num_for_scroll;
+//				});
+//				$(document).bind("touchstart",function(){
+//					marine.resume();
+//				})
+//				$(document).bind("touchend",function(){				
+//					marine.stop();
+//				});
+//				$(document).bind("touchmove",function(){				
+//					marine.resume();
+//				});
+				 	
+			 	
+			 	
+			 	//end of animation
 		</script>
 		<script>
 				
