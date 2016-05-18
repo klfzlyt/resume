@@ -87,7 +87,7 @@
 					<div class="circle circle-3">
 					    <div class="pie_left"><div class="left"></div></div>
 					    <div class="pie_right"><div class="right"></div></div>
-					    <div class="mask"><div class="html-css"><span>JavaScript</span><br><span class="value">0</span>%</div></div>
+					    <div class="mask"><div class="html-css"><span>DOM/Web API</span><br><span class="value">0</span>%</div></div>
 					</div>
 				</div>
 				<div class="info-right">
@@ -387,8 +387,16 @@
         				
         				//cirlce-2
         				if(data.curTop>=46000 && data.curTop<54000){
-        					var num=Math.round((data.curTop-46000)/88);
+        					var num=Math.round((data.curTop-46000)/133);
         					$('.circle-2').find('span.value').text(num);
+        					$.plug.circleprogress('.circle-2',num);
+        				}
+        				
+        				
+        				//cirlce-3
+        				if(data.curTop>=78000 && data.curTop<84000){
+        					var num=Math.round((data.curTop-78000)/75);
+        					$('.circle-3').find('span.value').text(num);
         					$.plug.circleprogress('.circle-2',num);
         				}
         				//console.log(data.curTop);
