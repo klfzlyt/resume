@@ -463,7 +463,7 @@ animation-direction:alternate;
 .ballon{
 	display: block;
 	width: 200px;
-	left: 30%;
+	right: 10%;
 	top: 0;
 	position: absolute;
 	z-index: 3 !important;
@@ -521,24 +521,113 @@ animation-direction:alternate;
 	position: absolute;
 }
 .infomation{
-	background-color: coral;
+	
 	z-index: 3 !important;
 }
-.info1{
+.infotop{
+	height: 30%;
 	width: 100%;
-	padding: 20px;
-	box-sizing: border-box;
-	height: 100%;
-	text-align: center;
-	position: absolute;
+	position: absolute;	
 }
-.info2{
+.infobottom{
+	top:30%;
+	height: 70%;
 	width: 100%;
-	padding: 20px;
+	position: absolute;
+	
+}
+.keyboard-1{
+	-webkit-opacity: 0.34;
+	opacity: 0.34;
+	left: 10%;
+}
+.keyboard-2{
+	bottom: 50%; 
+	transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	opacity: 0.24;
+	-webkit-opacity:0.24;
+}
+.keyboard-3{
+	bottom: 5%;
+	right: 5%;
+	transform: rotate(50deg);
+	-webkit-transform: rotate(50deg);
+	opacity: 0.17;
+	-webkit-opacity:0.17;
+}
+.infobottom img{
+	display: block;
+	position: absolute;
+	width: 50px;
+}
+.fisrt-info-top{
+	background-color: #dd7b26;
+}
+.second-info-top{
+	background-color: #10507a;
+}
+.second-info-bottom{
+	background-color: #e7decf;
+}
+
+.html-css{
+	top:10px;
+	margin-top: 18px;
+}
+.infotop img{
+	height: 100%;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0.21;
+	-webkit-opacity: 0.21;
+	-moz-opacity: 0.21;
+}
+.first-info-bottom{
+	background-color: #4b95ce;
+}
+.info-left{
+	float: left;
+	width: 50%;
+	display: block;
+	height: 100%;
+	
+}
+.info-right{
+	float: right;
+	width: 50%;
+	display: block;
+	height: 100%;
+	
+}
+.info{
+	width: 100%;
+	padding:0 20px;
 	box-sizing: border-box;
 	height: 100%;
-	text-align: center;
+	text-align: left;
 	position: absolute;
+	font-weight: bold;
+	
+}
+.information-1{
+	color: #FFFFFF;
+}
+
+.information-2{
+	color: #FFFFFF;
+	border-top: 2px solid #FFFFFF;
+}
+.information-3{
+	color: #000;
+	border-top: 2px solid #FFFFFF;
+}
+.information-4{
+	color: #000;
+	border-top: 2px solid #000;
+	top:50%;
 	
 }
 /*场景3*/

@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />		
 		<title></title>
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/circle_progress.css" />
 	</head>
 	<body>
 		<!--            	
@@ -14,22 +15,68 @@
 	    <!--        	
         	描述：信息1
         -->
-		<div class="fullpage infomation" data-18000="transform:translate(-100%,0%)"  data-23000="transform:translate(0%,0%)" data-25000="transform:translate(0%,0%)"  data-27000="transform:translate(0%,-100%)">
-			<div class="info1" data-23000="transform:translateY(100%)" data-24000="transform:translateY(0%)">
-					<p>能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画</p>
-					<p>熟悉已标准化的 HTML5 / CSS3 新特性</p>
+		<div class="fullpage infomation" data-20000="transform:translate(-100%,0%)"  data-23000="transform:translate(0%,0%)" data-27000="transform:translate(0%,0%)"  data-30000="transform:translate(0%,-100%)">
+			<div class="infotop fisrt-info-top">
+				<div class="info-left">
+					<div class="circle circle-1">
+					    <div class="pie_left"><div class="left"></div></div>
+					    <div class="pie_right"><div class="right"></div></div>
+					    <div class="mask"><div class="html-css"><span>HTML/CSS</span><br><span class="value">0</span>%</div></div>
+					</div>
+				</div>
+				<div class="info-right">
+					<img src="img/desk1.png" class="" />
+				</div>
 			</div>
-			<div class="info2" data-24000="transform:translateY(100%)" data-25000="transform:translateY(50%)">					
-					<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>
-					<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
+			<div class="infobottom first-info-bottom">
+				<div class="fullpage absolute">
+					<img src="img/keyboard.png" class="keyboard-1"/>
+					<img src="img/keyboard.png" class="keyboard-2"/>
+					<img src="img/keyboard.png" class="keyboard-3"/>
+				</div>
+				<div class="info information-1" data-23000="transform:translateY(100%)" data-24000="transform:translateY(0%)">
+						<p>能够编写语义化的 HTML，模块化的 CSS，实现较复杂的布局与动画</p>
+						
+				</div>
+				
+				<div class="info information-2" data-24000="transform:translateY(100%)" data-25000="transform:translateY(50%)">					
+						<p>熟悉已标准化的 HTML5 / CSS3 新特性</p>
+				</div>
 			</div>
-			
 			
 		</div>
 		<!--        	        	
         	描述：信息2
         -->
-		
+		<div class="fullpage infomation" data-43000="transform:translate3d(0%,-100%,0)"  data-46000="transform:translate3d(0%,0%,0)" data-56000="transform:translate3d(0%,0%,0)"  data-60000="transform:translate3d(-100%,0%,0)">
+			<div class="infotop second-info-top">
+				<div class="info-left">
+					<div class="circle circle-2">
+					    <div class="pie_left"><div class="left"></div></div>
+					    <div class="pie_right"><div class="right"></div></div>
+					    <div class="mask"><div class="html-css"><span>JavaScript</span><br><span class="value">0</span>%</div></div>
+					</div>
+				</div>
+				<div class="info-right">
+					<img src="img/desk2.png" class="" />
+				</div>
+			</div>
+			<div class="infobottom second-info-bottom">
+				<div class="fullpage absolute">
+					<img src="img/js.jpg" class="keyboard-1"/>
+					<img src="img/js.jpg" class="keyboard-2"/>
+					<img src="img/js.jpg" class="keyboard-3"/>
+				</div>
+				<div class="info information-3" data-46000="transform:translateX(100%)" data-49000="transform:translateX(0%)">
+						<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>						
+				</div>
+				
+				<div class="info information-4" data-51000="transform:translateX(100%)" data-54000="transform:translateX(0%)">											
+						<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
+				</div>
+			</div>
+			
+		</div>
 		<!--        	        	
         	描述：场景1
         -->
@@ -107,15 +154,16 @@
 			<!--                	
             	描述：气球1
             -->
-            <div class="fullpage ballonwrap"  data-11500="transform:translateY(100%)" data-14500="transform:translateY(-100%)">
+            <div class="fullpage ballonwrap"  data-20000="transform:translateY(100%)" data-23000="transform:translateY(-100%)">
 				<img class="ballon" src="img/ballon.png"></img>
 			</div>
 			<!--                	
             	描述：气球2
-            -->
+    
             <div class="fullpage ballon2wrap" data-16000="transform:translateY(100%)" data-18500="transform:translateY(-100%)">
 				<img class="ballon2" src="img/ballon2.png"></img>
-			</div>	
+			</div>
+			-->
 			<!--            	            	
             	描述：气球3
             -->
@@ -198,6 +246,7 @@
 		<script type="text/javascript" src="js/spaceinit.js" ></script>
 		<script type="text/javascript" src="js/animation.js" ></script>
 		<script type="text/javascript" src="js/interact.js" ></script>
+		<script type="text/javascript" src="js/circle_progress.js" ></script>
 		<script>
 			 $.plug.spaceship({
 			 	container:document.querySelector('.spaceship'),
@@ -209,6 +258,11 @@
 			 	$.plug.ratio(false,4500,1667,".hill");
 			 	$.plug.ratio(false,3840,2160,".scence3_bg",1.3)
 			 	var hided_element=['.star_container','.hello_world'];
+			 	
+			 	
+			 	
+			 	
+			 	//$.plug.circleprogress('.circle',22);
 			 	/*
 			 	 * animation
 			 	 */
@@ -253,7 +307,27 @@
         				}
         			
         			
-    			}
+    			},
+    			  render: function(data) {
+        				//Log the current scroll position.
+        				//23000------0
+        				//25000------90
+        				//cirlce-1
+        				if(data.curTop>=23000 && data.curTop<25000){
+        					var num=Math.round((data.curTop-23000)/22);
+        					$('.circle-1').find('span.value').text(num);
+        					$.plug.circleprogress('.circle-1',num);
+        				}
+        				
+        				
+        				//cirlce-2
+        				if(data.curTop>=46000 && data.curTop<54000){
+        					var num=Math.round((data.curTop-46000)/88);
+        					$('.circle-2').find('span.value').text(num);
+        					$.plug.circleprogress('.circle-2',num);
+        				}
+        				//console.log(data.curTop);
+    				}
 			});
 			 console.log(s.isMobile());
 			 if(s.isMobile()){

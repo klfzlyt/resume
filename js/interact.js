@@ -15,6 +15,9 @@
 	$('.ballon3div').css({left:left+'px'})
 	
 	 
+	 $heightpro=$('.infotop').height();
+	var protop=Math.round(($heightpro-$(".circle").height())/2)
+	$('.circle').css({top:protop+'px'})
 	
 	
 })($)
