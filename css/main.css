@@ -570,7 +570,12 @@ animation-direction:alternate;
 .second-info-bottom{
 	background-color: #e7decf;
 }
-
+.third-info-top{
+	background-color: #cfc3c8;
+}
+.third-info-bottom{
+	background-color: #4d5b73;
+}
 .html-css{
 	top:10px;
 	margin-top: 18px;
@@ -622,11 +627,21 @@ animation-direction:alternate;
 }
 .information-3{
 	color: #000;
-	border-top: 2px solid #FFFFFF;
+	border-top: 2px solid #000;
 }
 .information-4{
 	color: #000;
 	border-top: 2px solid #000;
+	top:50%;
+	
+}
+.information-5{
+	color: #fff;
+	border-top: 2px solid #FFFFFF;
+}
+.information-6{
+	color: #fff;
+	border-top: 2px solid #fff;
 	top:50%;
 	
 }
@@ -650,4 +665,19 @@ background: url(../img/flat-mountains.jpg) no-repeat 0 0;
 	height: 80px;
 	top:30%;
 	right: 0;
+}
+
+
+/*场景4*/
+.scence4_bg{
+	background: url(../img/scence4_bg.jpg) no-repeat 0 0;
+}
+.lemon{
+	bottom: 15% !important;
+}
+.cloud{
+	display: block;
+	height: 80px;
+	position: absolute;
+	right: 0;	
 }
