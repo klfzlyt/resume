@@ -118,7 +118,9 @@
             	描述：背景
             -->
             <div class="fullpage overflowhidden absolute">
-				<div class="star_planet fullpage" data-4900="transform:translate3d(0,0,0)" data-6300="transform:translate3d(0,-89px,0)"></div>
+				<div class="star_planet fullpage" data-4900="transform:translate3d(0,0,0)" >
+					<img src="img/phone_planet.jpg" alt=""  class="background_img"/>	
+				</div>
 			</div>
 			<!--            	
             	描述：星球
@@ -131,7 +133,9 @@
 				<!--                
                 	描述：飞船
                 -->
-				<div class="spaceship absolute" data-3570="transform:scale(0) rotate(0deg)" data-3700="bottom:10%;transform:scale(1) rotate(1440deg)" data-6100="bottom:100%"></div>
+                <div class="fullpage" data-3570="transform:scale(0) translate3d(0,0%,0)" data-3700="transform:scale(1) translate3d(0,0%,0)" data-6100="transform:scale(1) translate3d(0,-100%,0)">
+					<div class="spaceship absolute" ></div>
+				</div>
 				<!--                	
                 	描述：hello world
                 -->
@@ -182,7 +186,7 @@
 		<!--
         	描述：场景2
         -->
-		<section class="scence2 fullpage" data-6100="transform:translate3d(0,100%,0)" data-9100="transform:translate3d(0,0%,0);" data-26000="transform:translate3d(0%,0%,0)"  data-30000="transform:translate3d(0%,-98%,0)">
+		<section class="scence2 fullpage" data-6100="transform:translate3d(0,100%,0)" data-9100="transform:translate3d(0,0%,0);" data-26000="transform:translate3d(0%,0%,0)"  data-30000="transform:translate3d(0%,-100%,0)">
 
 			<!--        	
         	描述：西瓜
@@ -215,11 +219,15 @@
 			<!--            	
             	描述：背景
             -->
-            <div class="fullpage absolute">
-				<div class="hill-3 hill fullpage" data-9100="background-position-x:0%" data-17000="background-position-x:50%"></div>
-				<div class="hill-2 hill fullpage" data-9100="background-position-x:0%" data-17000="background-position-x:57%"></div>
+            <div class="fullpage absolute overflowhidden">
+			
+				<div class="hill-2 hill fullpage" data-9100="transform:translate3d(0px,0,0)">
+					<img src="img/scene2_2.jpg"  class="background_img"/>
+				</div>
 				
-				<div class="hill-1 hill fullpage" data-9100="background-position-x:0%" data-17000="background-position-x:100%"></div>
+				<div class="hill-1 hill fullpage" data-9100="transform:translate3d(0px,0,0)">
+					<img src="img/scene2_1.png"  class="background_img"/>
+				</div>
 			</div>
 			<!--
 	                        描述：场景2信息
@@ -265,7 +273,12 @@
 			<!--            	
             	描述：场景3背景
             -->
-			<div class="fullpage scence3_bg" data-31000="background-position-x:0%" data-45000="background-position-x:100%"></div>
+            <div class="fullpage overflowhidden absolute">
+				<div class="scence3_bg fullpage" data-31000="transform:translate3d(0px,0,0)" >
+					<img src="img/flat-mountains.jpg" alt=""  class="background_img"/>	
+				</div>
+			</div>
+			<!--<div class="fullpage scence3_bg" data-31000="background-position-x:0%" data-45000="background-position-x:100%"></div>-->
 			
 			<!--            	
             	描述：飞机
@@ -288,7 +301,12 @@
 			<!--            	
             	描述：场景4背景
             -->
-			<div class="fullpage scence4_bg" data-66000="background-position-x:0%" data-71000="background-position-x:100%"></div>
+            <div class="fullpage overflowhidden absolute">
+				<div class="scence4_bg fullpage" data-66000="transform:translate3d(0px,0,0)" >
+					<img src="img/scence4_bg.jpg" alt=""  class="background_img"/>	
+				</div>
+			</div>
+			<!--<div class="fullpage scence4_bg" data-66000="background-position-x:0%" data-71000="background-position-x:100%"></div>-->
 			<!--            	            	
             	描述：lemon            	
             -->
@@ -322,6 +340,7 @@
 		<script type="text/javascript" src="js/animation.js" ></script>
 		<script type="text/javascript" src="js/interact.js" ></script>
 		<script type="text/javascript" src="js/circle_progress.js" ></script>
+		<script type="text/javascript" src="js/background.js" ></script>
 		<script>
 			 $.plug.spaceship({
 			 	container:document.querySelector('.spaceship'),
@@ -332,9 +351,22 @@
 			 	
 			 	$.plug.ratio(false,4500,1667,".hill-1");
 			 	$.plug.ratio(false,4500,1667,".hill-2");
-			 	$.plug.ratio(false,4500,1667,".hill-3");
-			 	$.plug.ratio(false,3840,2160,".scence3_bg",1.3)
+			 	$.plug.ratio(false,3840,2160,".scence3_bg")
 			 	$.plug.ratio(false,2560,1496,".scence4_bg");
+			 	//mobile
+			 	$.plug.ratio(true,1080,1920,".star_planet")
+			 	
+			 	
+			 	
+			 	//背景偏移生成，动态得到大图片偏移
+			 	$.plug.background(true,".star_planet",6700);
+			 	$.plug.background(false,".hill-1",17000);
+			 	$.plug.background(false,".hill-2",20000);
+				$.plug.background(false,".scence3_bg",45000);
+			 	$.plug.background(false,".scence4_bg",71000);
+			 	
+			 	
+			 	//
 			 	var hided_element=['.star_container','.hello_world'];
 			 	
 			 	
@@ -418,7 +450,7 @@
 			});
 			 console.log(s.isMobile());
 			 if(s.isMobile()){
-			 	$.plug.ratio(true,1080,1920,".star_planet")
+			 
 //			 	$.plug.star({
 //			 		container:document.querySelector('.star_container'),
 //					bigstar:{

@@ -8,7 +8,7 @@
   			var wi=window.innerWidth*ratioo;
   			var _pxheight=Math.round(wi/ratio)+"px";
   		//	if(isback)
-	  			document.querySelector(dom).style.backgroundSize=wi+"px "+_pxheight
+	  			//document.querySelector(dom).style.backgroundSize=wi+"px "+_pxheight
   		//	else
   				document.querySelector(dom).style.height=_pxheight;
   		}
@@ -16,7 +16,7 @@
   			var he=window.innerHeight*ratioo;
   			var _pxwidth=Math.round(he*ratio)+"px";	
   		//	if(isback)
-  				document.querySelector(dom).style.backgroundSize=_pxwidth+" "+he+"px";
+  				//document.querySelector(dom).style.backgroundSize=_pxwidth+" "+he+"px";
 		//	else
 				document.querySelector(dom).style.width=_pxwidth;
   		}		
