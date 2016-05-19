@@ -179,10 +179,10 @@
 		<section class="scence2 fullpage" data-6100="transform:translate3d(0,100%,0)" data-9100="transform:translate3d(0,0%,0);" data-26000="transform:translate3d(0%,0%,0)"  data-30000="transform:translate3d(0%,-98%,0)">
 
 			<!--        	
-        	描述：枪兵
+        	描述：西瓜
         	-->
         	<div class="fullpage marinewrap" data-0="display:none" data-10100="display:block;transform:translateX(-100%)"  data-20000="transform:translateX(0%);opacity:1"  data-22000="opacity:0">
-				<img class="marine"  src="img/watermelon_walker.gif"></img>
+				<div class="sprite watermelon"></div>
 			</div>
 			<!--                	
             	描述：气球1
@@ -282,7 +282,7 @@
             	描述：lemon            	
             -->
             <div class="fullpage" data-66000="display:none" data-67000="display:block;transform:translateX(-100%)"  data-76000="transform:translateX(0%)" >
-            	<img src="img/lemon.gif" class="marine lemon" />            	
+            	<img src="img/lemon.gif" class="sprite lemon" />            	
             </div>
             
             <!--            
@@ -330,10 +330,11 @@
 			 	//$.plug.circleprogress('.circle',22);
 			 	/*
 			 	 * animation
+			 	 * totaltime,dom,parts,interval,stopframe
 			 	 */
-//			 	var marine=$.plug.animate(500,".marine",8,-100);
-// 				var num_for_scroll=0;
-//				var pre_num=0;
+			 	var watermelon=$.plug.animate(900,".watermelon",26,-140,19);
+   				var num_for_scroll=0;
+				var pre_num=0;
 //				setInterval(function(){
 //					if(num_for_scroll===pre_num)marine.stop();
 //				},1500);
@@ -342,15 +343,15 @@
 //					if(!marine.animating()){marine.resume();}
 //					pre_num=num_for_scroll;
 //				});
-//				$(document).bind("touchstart",function(){
-//					marine.resume();
-//				})
-//				$(document).bind("touchend",function(){				
-//					marine.stop();
-//				});
-//				$(document).bind("touchmove",function(){				
-//					marine.resume();
-//				});
+				$(document).bind("touchstart",function(){
+					watermelon.resume();
+				})
+				$(document).bind("touchend",function(){				
+					watermelon.stop();
+				});
+				$(document).bind("touchmove",function(){				
+					watermelon.resume();
+				});
 				 	
 			 	
 			 	
@@ -397,7 +398,7 @@
         				if(data.curTop>=78000 && data.curTop<84000){
         					var num=Math.round((data.curTop-78000)/75);
         					$('.circle-3').find('span.value').text(num);
-        					$.plug.circleprogress('.circle-2',num);
+        					$.plug.circleprogress('.circle-3',num);
         				}
         				//console.log(data.curTop);
     				}

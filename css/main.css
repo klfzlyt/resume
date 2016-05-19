@@ -501,18 +501,22 @@ animation-direction:alternate;
 .marinewrap{
 	z-index: 3 !important;
 }
-.marine{
+.watermelon{
+	width: 140px;
+	height: 100px;
+	background: url(../img/watermelon_walk_spritesheet.png) no-repeat 0px 0px;
+	background-size: 3651px 100%; 				 
+}
+.sprite{
 	z-index: 3 !important;
 	bottom: 25%;
 	right: 0;
-	width: 100px;
 	position: absolute;
-	display: block;
-	
+	display: block;	
 	/*animation: marinemove 1s infinite;*/
 }
 .marine_center{
-		z-index: 3 !important;
+	z-index: 3 !important;
 	bottom: 0;
 	display: block;
 	left: 50px;
@@ -674,6 +678,7 @@ background: url(../img/flat-mountains.jpg) no-repeat 0 0;
 }
 .lemon{
 	bottom: 15% !important;
+	width: 100px;
 }
 .cloud{
 	display: block;
