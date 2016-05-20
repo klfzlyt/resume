@@ -210,10 +210,10 @@
 			<!--            	            	
             	描述：气球3
             -->
-            <div class="fullpage ballon3wrap" data-25000="transform:translateY(-100%) scale(1)" data-28000="transform:translateY(0%) scale(1)" data-32500="transform:translateY(100%) scale(1)" data-33500="transform:translateY(100%) scale(1)" data-35000="transform:translateY(100%) scale(0)">
-	            <div class="ballon3div absolute">
+            <div class="fullpage ballon3wrap" data-25000="transform:translateY(-100%) scale(0.6)" data-28000="transform:translateY(0%) scale(0.6)" data-32500="transform:translateY(100%) scale(0.6)" data-33500="transform:translateY(100%) scale(0.6)" data-35000="transform:translateY(100%) scale(0)">
+	            <div class="ballon3div absolute overflowhidden">
 					<img  class="ballon3" src="img/ballon3.png" />
-					<img class="marine_center" src="img/watermelon.png" data-0="display:none" data-26000="display:block;opacity:0" data-28000="opacity:1;"  ></img>
+					<img class="people_center" src="img/people.png" data-0="display:none" data-26000="display:block;opacity:0" data-28000="opacity:1;"  ></img>
 				</div>
 			</div>
 			<!--            	
@@ -274,8 +274,11 @@
             	描述：场景3背景
             -->
             <div class="fullpage overflowhidden absolute">
-				<div class="scence3_bg fullpage" data-31000="transform:translate3d(0px,0,0)" >
-					<img src="img/flat-mountains.jpg" alt=""  class="background_img"/>	
+				<div class="scence3_2 fullpage" data-31000="transform:translate3d(0px,0,0)" >
+					<img src="img/scence3-2.jpg" alt=""  class="background_img"/>	
+				</div>
+				<div class="scence3_1 fullpage" data-31000="transform:translate3d(0px,0,0)" >
+					<img src="img/scene3-1.png" alt=""  class="background_img"/>	
 				</div>
 			</div>
 			<!--<div class="fullpage scence3_bg" data-31000="background-position-x:0%" data-45000="background-position-x:100%"></div>-->
@@ -302,22 +305,30 @@
             	描述：场景4背景
             -->
             <div class="fullpage overflowhidden absolute">
-				<div class="scence4_bg fullpage" data-66000="transform:translate3d(0px,0,0)" >
-					<img src="img/scence4_bg.jpg" alt=""  class="background_img"/>	
+				<div class="scence4_2 fullpage" data-66000="transform:translate3d(0px,0,0)" >
+					<img src="img/scene4-2.jpg" alt=""  class="background_img"/>	
+				</div>
+				<div class="scence4_1 fullpage" data-66000="transform:translate3d(0px,0,0)" >
+					<img src="img/scene4-1.png" alt=""  class="background_img"/>	
 				</div>
 			</div>
 			<!--<div class="fullpage scence4_bg" data-66000="background-position-x:0%" data-71000="background-position-x:100%"></div>-->
 			<!--            	            	
             	描述：lemon            	
             -->
-            <div class="fullpage" data-66000="display:none" data-67000="display:block;transform:translateX(-100%)"  data-76000="transform:translateX(0%)" >
+            <!--<div class="fullpage" data-66000="display:none" data-67000="display:block;transform:translateX(-100%)"  data-76000="transform:translateX(0%)" >
             	<img src="img/lemon.gif" class="sprite lemon" />            	
-            </div>
-            
+            </div>-->
+            	<!--        	
+        	描述：走路2
+        	-->
+        	<div class="fullpage animatewrap" data-66000="display:none" data-67000="display:block;transform:translateX(-100%)"  data-76000="transform:translateX(0%)">
+				<div class="sprite walkman2"></div>
+			</div>
             <!--            
             	描述：云
             -->
-            <div class="fullpage absolute">
+            <!--<div class="fullpage absolute">
             	<div class="fullpage" data-66000="display:none" data-67000="display:block;transform:translate3d(-100%,10%,0)"  data-83000="transform:translate3d(0%,10%,0)">
             		<img src="img/clouds.png"  class="cloud" />            	
             	</div>
@@ -328,7 +339,7 @@
             		<img src="img/clouds3.png"  class="cloud" />
             	</div>
             	
-            </div>
+            </div>-->
 		</section>
 		
 		
@@ -341,7 +352,8 @@
             -->
             <div class="fullpage overflowhidden absolute">
 				<div class="scence5_bg fullpage" data-94000="transform:translate3d(0px,0,0)" >
-					<img src="img/scene_5.jpg" alt=""  class="background_img"/>	
+					<img src="img/secene6.png" alt=""  class="background_img"/>
+					<img src="img/deer.gif" class="deer" />
 				</div>
 			</div>
         </section>
@@ -365,9 +377,11 @@
 			 	
 			 	$.plug.ratio(false,4500,1667,".hill-1");
 			 	$.plug.ratio(false,4500,1667,".hill-2");
-			 	$.plug.ratio(false,3840,2160,".scence3_bg")
-			 	$.plug.ratio(false,2560,1496,".scence4_bg");
-			 	$.plug.ratio(false,1024,576,".scence5_bg");
+			 	$.plug.ratio(false,3840,2160,".scence3_2")
+			 	$.plug.ratio(false,3840,2160,".scence3_1")
+			 	$.plug.ratio(false,2560,1496,".scence4_2");
+			 	$.plug.ratio(false,2560,1496,".scence4_1");
+			 	$.plug.ratio(false,2857,1216,".scence5_bg");
 			 	//mobile
 			 	$.plug.ratio(true,1080,1920,".star_planet")
 			 	
@@ -377,9 +391,11 @@
 			 	$.plug.background(true,".star_planet",6700);
 			 	$.plug.background(false,".hill-1",17000);
 			 	$.plug.background(false,".hill-2",20000);
-				$.plug.background(false,".scence3_bg",45000);
-			 	$.plug.background(false,".scence4_bg",71000);
-			 	$.plug.background(false,".scence5_bg",111000);
+				$.plug.background(false,".scence3_1",45000);
+				$.plug.background(false,".scence3_2",51000);
+			 	$.plug.background(false,".scence4_1",71000);
+			 	$.plug.background(false,".scence4_2",81000);
+			 	$.plug.background(false,".scence5_bg",100000);
 			 	
 			 	
 			 	//
@@ -393,9 +409,9 @@
 			 	 * animation
 			 	 * totaltime,dom,parts,interval,stopframe
 			 	 */
-			 	var watermelon=$.plug.animate(900,".walkman1",36,-122,19);
-   				var num_for_scroll=0;
-				var pre_num=0;
+			 	var Walkman1=$.plug.animate(900,".walkman1",36,-122,19);
+   				var Walkman2=$.plug.animate(1500,".walkman2",36,-80,19);
+				
 //				setInterval(function(){
 //					if(num_for_scroll===pre_num)marine.stop();
 //				},1500);
@@ -405,13 +421,16 @@
 //					pre_num=num_for_scroll;
 //				});
 				$(document).bind("touchstart",function(){
-					watermelon.resume();
+					Walkman1.resume();
+					Walkman2.resume();
 				})
 				$(document).bind("touchend",function(){				
-					watermelon.stop();
+					Walkman1.stop();
+					Walkman2.stop();
 				});
 				$(document).bind("touchmove",function(){				
-					watermelon.resume();
+					Walkman1.resume();
+					Walkman2.resume();
 				});
 				 	
 			 	
