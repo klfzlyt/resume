@@ -519,7 +519,7 @@ animation-direction:alternate;
 	left: 0;
 	 
 }
-.marinewrap{
+.animatewrap{
 	z-index: 3 !important;
 }
 .watermelon{
@@ -527,6 +527,13 @@ animation-direction:alternate;
 	height: 100px;
 	background: url(../img/watermelon_walk_spritesheet.png) no-repeat 0px 0px;
 	background-size: 3651px 100%; 				 
+}
+.walkman1{
+	width: 140px;
+	height: 120px;
+	/*5793*158*/
+	background: url(../img/walk1_36f.png) no-repeat 0px 0px;
+	background-size: 4389px 100%;
 }
 .sprite{
 	z-index: 3 !important;
