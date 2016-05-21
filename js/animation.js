@@ -2,7 +2,7 @@
 		function animate(totaltime,dom,parts,interval,stopframe){
 				var temp=0;
 				var stop_flag=false;
-				var timer=setInterval(function(){
+				var timer=null;
 					var num=temp*(interval);
 					$(dom).css({"background-position-x":num+"px"});
 					temp++;
@@ -10,8 +10,8 @@
 						clearInterval(timer),timer=null
 						stop_flag=false;
 					}
-					if(temp===parts)temp=0
-				},totaltime/parts);
+					if(temp===parts)temp=0;
+				
 				return {
 					animating:function(){return timer!==null?true:false},
 					stop:function(va){

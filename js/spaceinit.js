@@ -27,10 +27,10 @@
 			pic_src_arr.push(prefix+i+postfix)
 			var $img=$("<img/>").attr("src",prefix+i+postfix).appendTo($(container)).css({position:"absolute"});
 			//.attr("width",param.pic_width);
-			$img.get(0).dataset[data_begin+(i-begin_num)*part+""]="display:none";
-			$img.get(0).dataset[data_begin+(i-begin_num)*part+speed+""]="display:block";
+			$img.data(data_begin+(i-begin_num)*part+"","display:none");
+			$img.data(data_begin+(i-begin_num)*part+speed+"","display:block");
 			if(i!==end_num)
-			$img.get(0).dataset[data_begin+(i-begin_num)*part+(2*speed)+""]="display:none";
+			$img.data(data_begin+(i-begin_num)*part+(2*speed)+"","display:none");
 		}
 		
 	}
