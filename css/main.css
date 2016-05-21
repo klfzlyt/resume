@@ -606,6 +606,14 @@ animation-direction:alternate;
 	background: url(../img/walk3_26f.png) no-repeat 0px 0px;
 	background-size: 2451px 100%;
 }
+.walkman4{
+	bottom: 16% !important;
+	width: 180px;
+	height: 168px;
+	/*4109*168*/
+	background: url(../img/walk4_20f.png) no-repeat 0px 0px;
+	background-size: 4109px 100%;
+}
 .sprite{
 	z-index: 3 !important;
 	bottom: 25%;
@@ -669,15 +677,26 @@ animation-direction:alternate;
 .second-info-top{
 	background-color: #10507a;
 }
-.second-info-bottom{
-	background-color: #e7decf;
-}
 .third-info-top{
 	background-color: #cfc3c8;
+}
+.fourth-info-top{
+	background-color: #cfc3c8;
+}
+/*info bottom color*/
+.first-info-bottom{
+	background-color: #4b95ce;
+}
+.second-info-bottom{
+	background-color: #e7decf;
 }
 .third-info-bottom{
 	background-color: #4d5b73;
 }
+.fourth-info-bottom{
+	background-color: #4d5b73;
+}
+
 .html-css{
 	top:10px;
 	margin-top: 18px;
@@ -692,9 +711,7 @@ animation-direction:alternate;
 	-webkit-opacity: 0.21;
 	-moz-opacity: 0.21;
 }
-.first-info-bottom{
-	background-color: #4b95ce;
-}
+
 .info-left{
 	float: left;
 	width: 50%;
@@ -742,6 +759,16 @@ animation-direction:alternate;
 	border-top: 2px solid #FFFFFF;
 }
 .information-6{
+	color: #fff;
+	border-top: 2px solid #fff;
+	top:50%;
+	
+}
+.information-7{
+	color: #fff;
+	border-top: 2px solid #FFFFFF;
+}
+.information-8{
 	color: #fff;
 	border-top: 2px solid #fff;
 	top:50%;
