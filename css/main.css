@@ -126,7 +126,7 @@ html,body{
 }
  
 /*scene1*/
-.scence1{
+.scene1{
 z-index: 1 !important;	
 transition: opacity 0.7s;
 -webkit-transition:opacity 0.7s;
@@ -168,6 +168,9 @@ opacity: 0;
 	to{
 		transform: translate3d(0,10px,0);
 	}
+}
+.siyuan{
+	font-family:'SiYuanBold37dc444f84593';
 }
 .awardsleft{
 	height: 100%;
@@ -229,7 +232,9 @@ opacity: 0;
  
 	}
 }
-
+.star_container{
+	height: 60%;
+}
 .star{
 	position: absolute;	
 }
@@ -342,6 +347,7 @@ animation-direction:alternate;
 	bottom: 0%;
 	position: relative !important;	
 	margin: 0 auto;	
+	border-radius: 20px;
 }
 @media only screen and (min-width:768px ) {
 	.hello_world{
@@ -482,56 +488,9 @@ animation-direction:alternate;
 
 
 /*scene2*/
-.scence2{
+.scene2{
 	z-index: 0 !important;
 }
-.hill{
-	
-	
-}
-.hill-1{
-	 
-}
-.hill-2{
-	 
-}
-.hill-3{
- 
-}
-.HTMLinfo{
-	text-align: center;
-	line-height: 1.4;	 
-	left:0;
- 	transform-origin: center;
- 	-webkit-transform-origin:center;
- 	position: absolute;
- 	cursor:pointer;
-	bottom: 0;	
-	color: white;
-	/*border: 1px solid black;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;*/
-	 
-}
-.scence2_info{
-	 bottom:0;
-	z-index: 3;
-	width: 100%;
-	height: 100%;
-	 position: absolute;
-}
-
- 
-
-
-
- 
- 
-
-
- 
-
 .ballonwrap{
 	z-index: 3 !important;
 }
@@ -584,7 +543,7 @@ animation-direction:alternate;
 	background-size: 3651px 100%; 				 
 }
 .walkman1{
-	width: 140px;
+	width: 100px;
 	height: 120px;
 	/*5793*158*/
 	background: url(../img/walk1_36f.png) no-repeat 0px 0px;
@@ -741,8 +700,11 @@ animation-direction:alternate;
 	height: 100%;
 	text-align: left;
 	position: absolute;
-	font-weight: bold;
+	 
 	
+}
+.infomation{
+	z-index: 4 !important;
 }
 .information-1{
 	color: #FFFFFF;
@@ -793,13 +755,13 @@ animation-direction:alternate;
 	
 }
 /*场景3*/
-.scence3{
+.scene3{
 	z-index: -1 !important;
 }
 .scence3_bg{
  
 }
-.scence3 .plane{
+.scene3 .plane{
  	display: block;
  	position: absolute;
 	right: 0;
@@ -816,9 +778,7 @@ animation-direction:alternate;
 
 
 /*场景4*/
-.scence4_bg{
-	 
-}
+ 
 .lemon{
 	bottom: 15% !important;
 	width: 100px;
@@ -840,7 +800,14 @@ animation-direction:alternate;
 	bottom: 16%;
 	z-index: 4;
 }
-
+.leaf{
+	height: 40px;
+	display: block;
+	position: absolute;
+	left: 90%;
+	bottom: 16%;
+	z-index: 4;
+}
 /*end*/
 .end_bottom{
 	background: #c7911c;
@@ -855,4 +822,18 @@ animation-direction:alternate;
 }
 .end_wrap{
 	background: #343434;
+}
+
+.mycard{
+	width: 80%;
+	left: 10%;
+	display: block;
+	position: absolute;
+	top: 15%;
+}
+.over{
+	position: absolute;
+	text-align: right;
+	right: 0;
+	bottom: 0;
 }
