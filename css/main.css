@@ -638,9 +638,12 @@ animation-direction:alternate;
 	height: 30%;
 	width: 100%;
 	position: absolute;	
+	top:0;
+	left:0
 }
 .infobottom{
 	top:30%;
+	left:0;
 	height: 70%;
 	width: 100%;
 	position: absolute;
@@ -681,7 +684,10 @@ animation-direction:alternate;
 	background-color: #cfc3c8;
 }
 .fourth-info-top{
-	background-color: #cfc3c8;
+	background-color:  #CCCAC2;
+}
+.fifth-info-top{
+	background-color:  #CCCAC2;
 }
 /*info bottom color*/
 .first-info-bottom{
@@ -694,9 +700,11 @@ animation-direction:alternate;
 	background-color: #4d5b73;
 }
 .fourth-info-bottom{
-	background-color: #4d5b73;
+	background-color: #CDE0D5;
 }
-
+.fifth-info-bottom{
+	background-color: #CDE0D5;
+}
 .html-css{
 	top:10px;
 	margin-top: 18px;
@@ -765,12 +773,22 @@ animation-direction:alternate;
 	
 }
 .information-7{
-	color: #fff;
-	border-top: 2px solid #FFFFFF;
+	color: #000;
+	border-top: 2px solid #000;
 }
 .information-8{
-	color: #fff;
-	border-top: 2px solid #fff;
+	color: #000;
+	border-top: 2px solid #000;
+	top:50%;
+	
+}
+.information-9{
+	color: #000;
+	border-top: 2px solid #000;
+}
+.information-10{
+	color: #000;
+	border-top: 2px solid #000;
 	top:50%;
 	
 }
@@ -821,4 +839,20 @@ animation-direction:alternate;
 	left: 40%;
 	bottom: 16%;
 	z-index: 4;
+}
+
+/*end*/
+.end_bottom{
+	background: #c7911c;
+}
+
+.end_pic{
+	width:100%;
+	display: block;
+	position: absolute;
+	left: 0%;
+	top: 30%;
+}
+.end_wrap{
+	background: #343434;
 }

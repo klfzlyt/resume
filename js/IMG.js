@@ -9,7 +9,7 @@ window.IMG=[
 	"./img/scene3-1.png",
 	"./img/scene4-1.png",
 	"./img/scene4-2.jpg",
-	"./img/secene6.png",
+	//"./img/secene6.png",
 	"./img/walk1_36f.png",
 	"./img/walk2_36f.png",
 	"./img/ballon.png",
