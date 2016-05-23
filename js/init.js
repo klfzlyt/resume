@@ -1,47 +1,30 @@
- Loader(IMG,5).complete(function() {
-           			
+var imgLoad=imagesLoaded("div",{ background: true }, function() {
+  // images have loaded
+       			
+           			 console.log("done");
            			 
-           			 
-           			 
-           		$.plug.spaceship({
-			 	container:document.querySelector('.spaceship'),
-			 	data_begin:3500,
-			 	data_end:4500,
-			 	speen:80
-			 	});
-			 	$.plug.star({
-			 		container:document.querySelector('.star_container'),
-					bigstar:{
-						src:"./img/star_big.png",
-						number:1
-					},
-					midstar:{
-						src:"./img/star_mid.png",
-						number:1
-					}
-			 	});
-			 	$.plug.ratio(true,1080,1920,".scene1-1")
-			 	$.plug.ratio(false,4500,1667,".scene2-1");
-			 	$.plug.ratio(false,4500,1667,".scene2-2");
-			 	$.plug.ratio(false,3840,2160,".scene3-2")
-			 	$.plug.ratio(false,3840,2160,".scene3-1")
-			 	$.plug.ratio(false,2560,1496,".scene4-2");
-			 	$.plug.ratio(false,2560,1496,".scene4-1");
-			 	$.plug.ratio(false,2857,1216,".scence5_bg");
-			 	$.plug.ratio(false,800,800,".scence6_bg");
+       
+			 
+			 
+			 
+			 
+			 
+			 	
+			 	
+			 
 			 
 			 
 			 		 	
 			 	//背景偏移生成，动态得到大图片偏移
-			 	$.plug.background(true,".scene1-1",6700);
-			 	$.plug.background(false,".scene2-1",17000);
-			 	$.plug.background(false,".scene2-1",20000);
-				$.plug.background(false,".scene3-1",45000);
-				$.plug.background(false,".scene3-2",51000);
-			 	$.plug.background(false,".scene4-1",64000);
-			 	$.plug.background(false,".scene4-2",70000);
-			 	$.plug.background(false,".scence5_bg",100000);
-			 	$.plug.background(false,".scence6_bg",120000);
+			 	$.plug.background(true,".scene1-1",6700,$.plug.ratio(true,1080,1920,".scene1-1"));
+			 	$.plug.background(false,".scene2-1",18000,$.plug.ratio(false,4500,1667,".scene2-1"));
+			 	$.plug.background(false,".scene2-2",22000,$.plug.ratio(false,4500,1667,".scene2-2"));
+				$.plug.background(false,".scene3-1",42000,$.plug.ratio(false,3840,2160,".scene3-1"));
+				$.plug.background(false,".scene3-2",48000,$.plug.ratio(false,3840,2160,".scene3-2"));
+			 	$.plug.background(false,".scene4-1",58000,$.plug.ratio(false,2560,1496,".scene4-1"));
+			 	$.plug.background(false,".scene4-2",62000,$.plug.ratio(false,2560,1496,".scene4-2"));
+			 	$.plug.background(false,".scene5-1",76000,$.plug.ratio(false,2857,1216,".scene5-1"));
+			 	$.plug.background(false,".scene6-1",94000,$.plug.ratio(false,800,800,".scene6-1"));
 			 	var datatop;
 			 	var aniflag=true;
 			 	s= skrollr.init({					
@@ -203,10 +186,31 @@
 //			 		domrange:50
 //			 	})
 //			 }	 
+			    			 
+//         		$.plug.spaceship({
+//			 	container:document.querySelector('.spaceship'),
+//			 	data_begin:3500,
+//			 	data_end:4500,
+//			 	speen:80
+//			 	});
+			 	$.plug.star({
+			 		container:document.querySelector('.star_container'),
+					bigstar:{
+						src:"./img/star_big.png",
+						number:5
+					},
+					midstar:{
+						src:"./img/star_mid.png",
+						number:10
+					}
+			 	});
            	 $('.loding').hide();         
           
 			 $(".scene1").css("opacity","1");           			 
            			 
            			 
-           			 
-        		});
+});
+imgLoad.on( 'progress', function( instance, image ) {
+  var result = image.isLoaded ? 'loaded' : 'broken';
+  console.log( 'image is ' + result + ' for ' + image.img.src );
+});

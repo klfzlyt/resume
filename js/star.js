@@ -25,13 +25,13 @@
 	var midstar=param.midstar;
 	var smallstar=param.smallstar;
 	var container=setting.container;
-	var container_size=container.getBoundingClientRect();
+	var container_size=$(container);//container.getBoundingClientRect();
 	var class_name=param.classname;
 	var move_arr=[];
 	function generate_star(star){		
 		for(var i=0;i<star.number;i++){
-			var random_width=Math.round(Math.random()*container_size.width);
-			var random_height=Math.round(Math.random()*container_size.height);
+			var random_width=Math.round(Math.random()*container_size.width());
+			var random_height=Math.round(Math.random()*container_size.height());
 			var $img=$("<img/>").attr("src",star.src).attr('width',"20px");
 			var $star=$('<div></div>').addClass(class_name).append($img).appendTo($(container));
 			if(i%5===0)$star.addClass(twinkle);

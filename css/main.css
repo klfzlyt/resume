@@ -15,6 +15,60 @@ html,body{
  * 
  * 
  */
+.spinner {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  text-align: center;
+  font-size: 10px;
+}
+ 
+.spinner > div {
+  background-color: #67CF22;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
     .loding{
         position: absolute;
         top: 0;
@@ -32,7 +86,7 @@ html,body{
   		height: 10%;
     }
     
-.spinner {
+.spinner1 {
 	display: block;    
 	position: absolute;
     left: 45%;
@@ -66,7 +120,7 @@ html,body{
   }
 }
 
- 
+  
 .z-2{
 	z-index: 2;
 }
@@ -124,7 +178,18 @@ html,body{
 .absolute{
 	position:absolute;
 }
- 
+ .displaynone{
+	display: none;
+}
+.scene1,.scene2,.scene3,.scene4,.scene5,.scene6{
+	display: none;
+}
+.infomation{
+	z-index: 4 !important;
+	display: none;
+}
+
+
 /*scene1*/
 .scene1{
 z-index: 1 !important;	
@@ -132,6 +197,25 @@ transition: opacity 0.7s;
 -webkit-transition:opacity 0.7s;
 opacity: 0;
 }
+.scene1-1-bg{
+	background: url(../img/phone_planet.jpg) no-repeat 0 0;
+}
+.scene2-1-bg{
+	background: url(../img/scene2_1.png) no-repeat 0 0;
+}
+.scene2-2-bg{
+	background: url(../img/scene2_2.jpg) no-repeat 0 0;
+}
+.star1_bg{
+	background: url(../img/star_tiny.png);
+}
+.star2_bg{
+	background: url(../img/star_mid.png);
+}
+.star3_bg{
+	background: url(../img/star_big.png);
+}
+
 .arrow{
 	position: absolute;
 	left: 0;
@@ -224,6 +308,7 @@ opacity: 0;
  position: absolute;
  top: 0;
  left: 0;
+ background-size: 100% 100%;
  
 }
 @media only screen and (min-width: 768px) {
@@ -280,10 +365,10 @@ animation-direction:alternate;
 	height: 175px;
 	left:10%;
 	bottom: 10%;
+	background: url(../img/spaceship-64.png) no-repeat 0 0;
+	 
 }
-.spaceship img{
-	width: 100px;
-}
+ 
 
 /*desktop*/
 @media only screen and (min-width:768px ) {
@@ -491,12 +576,15 @@ animation-direction:alternate;
 .scene2{
 	z-index: 0 !important;
 }
+
 .ballonwrap{
 	z-index: 3 !important;
 }
 .ballon{
 	display: block;
+	background: url(../img/ballon.png) no-repeat 0 0;
 	width: 200px;
+	height:237px;
 	right: 10%;
 	top: 0;
 	position: absolute;
@@ -573,6 +661,9 @@ animation-direction:alternate;
 	background: url(../img/walk4_20f.png) no-repeat 0px 0px;
 	background-size: 4109px 100%;
 }
+.character{
+	background-size: 100% 100%;
+}
 .sprite{
 	z-index: 3 !important;
 	bottom: 25%;
@@ -608,6 +699,12 @@ animation-direction:alternate;
 	position: absolute;
 	
 }
+.first-info-bottom .keyboard-1,.first-info-bottom .keyboard-2,.first-info-bottom .keyboard-3{
+	background: url(../img/keyboard.png) no-repeat 0 0;
+}
+
+
+
 .keyboard-1{
 	-webkit-opacity: 0.34;
 	opacity: 0.34;
@@ -628,10 +725,12 @@ animation-direction:alternate;
 	opacity: 0.17;
 	-webkit-opacity:0.17;
 }
-.infobottom img{
+.infobottom .keyboard-1,.infobottom .keyboard-2,.infobottom .keyboard-3{
 	display: block;
 	position: absolute;
 	width: 50px;
+	height: 50px;
+	background-size: 100% 100%;
 }
 .fisrt-info-top{
 	background-color: #dd7b26;
@@ -671,14 +770,29 @@ animation-direction:alternate;
 .infotop img{
 	height: 100%;
 	display: block;
+		opacity: 0.21;
+	-webkit-opacity: 0.21;
+	-moz-opacity: 0.21;
+}
+.info-left{
+	overflow: hidden;
+}
+.infotop .info-right div{
+	height: 100%;
+	width: 50%;
+	display: block;
 	position: absolute;
 	right: 0;
 	top: 0;
 	opacity: 0.21;
 	-webkit-opacity: 0.21;
 	-moz-opacity: 0.21;
+	background-size: 100% 100%;
+	overflow-y: hidden;
 }
-
+.fisrt-info-top .info-right div{
+	background: url(../img/desk1.png) no-repeat 0 0;
+}
 .info-left{
 	float: left;
 	width: 50%;
@@ -703,9 +817,7 @@ animation-direction:alternate;
 	 
 	
 }
-.infomation{
-	z-index: 4 !important;
-}
+
 .information-1{
 	color: #FFFFFF;
 }
@@ -809,6 +921,9 @@ animation-direction:alternate;
 	z-index: 4;
 }
 /*end*/
+.end{
+	display: none;
+}
 .end_bottom{
 	background: #c7911c;
 }

@@ -6,19 +6,23 @@
  		var ratio=width/height;
   		if(iswidth){  		
   			var wi=window.innerWidth*ratioo;
-  			var _pxheight=Math.round(wi/ratio)+"px";
+  			var numb=Math.round(wi/ratio);
+  			var _pxheight=numb+"px";
   		//	if(isback)
 	  			//document.querySelector(dom).style.backgroundSize=wi+"px "+_pxheight
   		//	else
   				document.querySelector(dom).style.height=_pxheight;
+  				return numb;
   		}
   		else{
   			var he=window.innerHeight*ratioo;
-  			var _pxwidth=Math.round(he*ratio)+"px";	
+  			var numb=Math.round(he*ratio);
+  			var _pxwidth=numb+"px";	
   		//	if(isback)
   				//document.querySelector(dom).style.backgroundSize=_pxwidth+" "+he+"px";
 		//	else
 				document.querySelector(dom).style.width=_pxwidth;
+				return numb;
   		}		
 }
  	 if(!$.plug)$.plug={};

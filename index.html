@@ -13,8 +13,16 @@
         	描述：loading
         -->
 		<div class="loding fullpage">
-        	<img src="img/loading.gif"/>
+			<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+			</div>
         </div>		
+      
+      
 		<!--        	        	
         	描述：场景1
         -->
@@ -29,17 +37,22 @@
             <div class="fullpage overflowhidden absolute">
 				<div class="scene1-1 star_planet fullpage" 
 					data-4900="transform:translate3d(0,0px,0)" >
-					<img src="img/phone_planet.jpg" alt=""  class="background_img"/>	
+					<div  alt=""  class="background_img scene1-1-bg"></div>
+						<!--
+                	描述：星星
+                	-->
+					<div class="star_container fullpage absolute">	
+						<div class="displaynone star1_bg"></div>
+						<div class="displaynone star2_bg"></div>
+						<div class="displaynone star3_bg"></div>
+					</div>
 				</div>
 			</div>
 			<!--            	
             	描述：星球
             -->
 			<section class="absolute fullpage z-2">
-				<!--
-                	描述：星星
-                -->
-				<div class="star_container fullpage absolute"></div>
+			
 				<!--                
                 	描述：飞船
                 -->
@@ -47,7 +60,9 @@
                 	data-3570="transform:scale(0) translate3d(0,0%,0)" 
                 	data-3700="transform:scale(1) translate3d(0,0%,0)" 
                 	data-6100="transform:scale(1) translate3d(0,-100%,0)">
-					<div class="spaceship absolute" ></div>
+					<div class="spaceship absolute character" >
+					
+					</div>
 				</div>
 				<!--                	
                 	描述：hello world
@@ -106,7 +121,8 @@
 		<!--
         	描述：场景2
         -->
-		<section class="scene2 fullpage" 
+		<section class="scene2 fullpage displaynone" 
+			data-0="display:none"
 			data-6100="transform:translate3d(0,100%,0);display:block" 
 			data-9100="transform:translate3d(0,0%,0);display:block" 
 			data-20000="transform:translate3d(0%,0%,0);display:none"  
@@ -116,15 +132,19 @@
             -->
             <div class="fullpage absolute overflowhidden">
 			
-				<div class="fullpage scene2-1" 
-					data-10000="transform:translate3d(0px,0,0)">
-					<img src="img/scene2_2.jpg"  class="background_img"/>
-				</div>
+			
 				
 				<div class="fullpage scene2-2" 
 					data-10000="transform:translate3d(0px,0,0)">
-					<img src="img/scene2_1.png"  class="background_img"/>
+					<div class="background_img scene2-2-bg"></div>
 				</div>
+				
+				
+				<div class="fullpage scene2-1" 
+					data-10000="transform:translate3d(0px,0,0)">
+					<div class="background_img scene2-1-bg"></div>
+				</div>
+				
 			</div>
 			<!--        	
         	描述：走路1
@@ -132,8 +152,8 @@
         	<div class="fullpage animatewrap" 
         		data-0="display:none" 
         		data-9100="display:block;transform:translate3d(-100%,0,0)"  
-        		data-18000="transform:translate3d(0%,0,0);opacity:1"  
-        		data-20000="opacity:0">
+        		data-18000="transform:translate3d(0%,0,0);display:block"  
+        		data-20000="display:none">
 				<div class="sprite walkman1"></div>
 			</div>
 			<!--                	
@@ -142,7 +162,8 @@
             <div class="fullpage ballonwrap"  
             	data-17000="transform:translate3d(0,100%,0)" 
             	data-19000="transform:translate3d(0,-100%,0)">
-				<img class="ballon" src="img/ballon.png"></img>
+            	
+				<div class="ballon character"></div>
 			</div>
 	
 		</section>
@@ -151,11 +172,16 @@
         -->
 		<div class="fullpage infomation" 
 			data-0="display:none"
-			data-17000="transform:translate3d(-100%,0%,0);display:block"  
-			data-20000="transform:translate3d(0%,0%,0);display:block" 
-			data-26000="transform:translate3d(0%,0%,0);display:block"  
-			data-30000="transform:translate3d(0%,-100%,0);display:none">
-			<div class="infotop fisrt-info-top">
+			data-17000="display:block"
+			data-29000="display:none"
+			
+			>
+			<div class="infotop fisrt-info-top"
+				data-17000="transform:translate3d(0%,-100%,0)"  
+				data-20000="transform:translate3d(0%,0%,0)" 
+				data-26000="transform:translate3d(0%,0%,0)"  
+				data-29000="transform:translate3d(100%,0%,0)"
+				>
 				<div class="info-left">
 					<div class="circle circle-1">
 					    <div class="pie_left"><div class="left"></div></div>
@@ -164,14 +190,19 @@
 					</div>
 				</div>
 				<div class="info-right">
-					<img src="img/desk1.png" class="" />
+					<div></div>
 				</div>
 			</div>
-			<div class="infobottom first-info-bottom">
+			<div class="infobottom first-info-bottom"
+				data-17000="transform:translate3d(0%,100%,0)"  
+				data-20000="transform:translate3d(0%,0%,0)"
+				data-26000="transform:translate3d(0%,0%,0)"  
+				data-29000="transform:translate3d(-100%,0%,0)"
+				>
 				<div class="fullpage absolute">
-					<img src="img/keyboard.png" class="keyboard-1"/>
-					<img src="img/keyboard.png" class="keyboard-2"/>
-					<img src="img/keyboard.png" class="keyboard-3"/>
+					<div   class="keyboard-1"></div>
+					<div   class="keyboard-2"></div>
+					<div   class="keyboard-3"></div>
 				</div>
 				<div class="info information-1" 
 					data-20000="transform:translate3d(0,100%,0)" 
@@ -193,24 +224,24 @@
         	描述：场景3
         -->
 		<section class="scene3 fullpage" 
-			data-25000="display:block" 
-			data-26000="display:block"  
-			data-54000="display:none" 
+			data-0="display:none"		
+			data-25000="display:block"  
+			data-42000="display:none" 
 			>
 			<!--            	
             	描述：场景3背景
             -->
             <div class="fullpage overflowhidden absolute">
 				<div class="scene3-1 fullpage" 
-					data-31000="transform:translate3d(0px,0,0)" >
+					data-26000="transform:translate3d(0px,0,0)" >
 					<img src="img/scence3-2.jpg" alt=""  class="background_img"/>	
 				</div>
 				<div class="scene3-2 fullpage" 
-					data-31000="transform:translate3d(0px,0,0)" >
+					data-26000="transform:translate3d(0px,0,0)" >
 					<img src="img/scene3-1.png" alt=""  class="background_img"/>	
 				</div>
 			</div>
-					<!--            	            	
+			<!--            	            	
             	描述：气球3
             -->
             <div class="fullpage ballon3wrap" 
@@ -240,17 +271,19 @@
 			</div>
 		</section>
 		<!--        	        	
-        	描述：信息2
+        	描述：信息2 xinxi2
         -->
 		<div class="fullpage infomation" 
-			data-42000="display:none"
-			data-43000="display:block"    
-			data-60000="display:none">
+			data-0="display:none"
+			data-38000="display:block"    
+			data-51000="display:none"
+			
+			>
 			<div class="infotop second-info-top"
-				data-43000="transform:translate3d(0%,-100%,0)" 
-				data-46000="transform:translate3d(0%,0%,0)" 
-				data-54000="transform:translate3d(0%,0%,0)"  
-				data-60000="transform:translate3d(0%,-100%,0)"
+				data-39000="transform:translate3d(0%,-100%,0)" 
+				data-42000="transform:translate3d(0%,0%,0)" 
+				data-48000="transform:translate3d(0%,0%,0)"  
+				data-51000="transform:translate3d(0%,-100%,0)"
 				>
 				<div class="info-left">
 					<div class="circle circle-2">
@@ -264,10 +297,10 @@
 				</div>
 			</div>
 			<div class="infobottom second-info-bottom"
-				data-43000="transform:translate3d(0%,100%,0)" 
-				data-46000="transform:translate3d(0%,0%,0)" 
-				data-54000="transform:translate3d(0%,0%,0)"  
-				data-60000="transform:translate3d(0%,100%,0)"
+				data-39000="transform:translate3d(0%,100%,0)" 
+				data-42000="transform:translate3d(0%,0%,0)" 
+				data-48000="transform:translate3d(0%,0%,0)"  
+				data-51000="transform:translate3d(0%,100%,0)"
 				>
 				<div class="fullpage absolute">
 					<img src="img/js.jpg" class="keyboard-1"/>
@@ -275,14 +308,14 @@
 					<img src="img/js.jpg" class="keyboard-3"/>
 				</div>
 				<div class="info information-3" 
-					data-46000="transform:translate3d(100%,0,0)" 
-					data-49000="transform:translate3d(0%,0,0)">
+					data-42000="transform:translate3d(100%,0,0)" 
+					data-45000="transform:translate3d(0%,0,0)">
 						<p>熟悉 ECMAScript（JavaScript），对 JavaScript 引擎及相关 JIT 技术有一定的了解</p>						
 				</div>
 				
 				<div class="info information-4" 
-					data-51000="transform:translate3d(100%,0,0)" 
-					data-54000="transform:translate3d(0%,0,0)">											
+					data-45000="transform:translate3d(100%,0,0)" 
+					data-48000="transform:translate3d(0%,0,0)">											
 						<p>了解 ECMAScript 新标准与相关后处理工具并能在项目中使用</p>
 				</div>
 			</div>
@@ -291,20 +324,21 @@
 		<!--        	
         	描述：场景4
         -->
-		<section class="fullpage scence4" 
-			data-53000="display:none" 
-			data-54000="display:block" 			 
+		<section class="fullpage scene4" 
+			data-0="display:none" 
+			data-47000="display:block"
+			data-60000="display:none"
 			>
 			<!--            	
             	描述：场景4背景
             -->
             <div class="fullpage overflowhidden absolute">
 				<div class="scene4-2 fullpage" 
-					data-54000="transform:translate3d(0px,0,0)" >
+					data-48000="transform:translate3d(0px,0,0)" >
 					<img src="img/scene4-2.jpg" alt=""  class="background_img"/>	
 				</div>
 				<div class="scene4-1 fullpage" 
-					data-54000="transform:translate3d(0px,0,0)" >
+					data-48000="transform:translate3d(0px,0,0)" >
 					<img src="img/scene4-1.png" alt=""  class="background_img"/>	
 				</div>
 			</div>
@@ -319,9 +353,9 @@
         	描述：走路2
         	-->
         	<div class="fullpage animatewrap" 
-        		data-59000="display:none" 
-        		data-60000="display:block;transform:translate3d(-100%,0,0)"  
-        		data-69000="transform:translate3d(0%,0,0)">
+        		data-0="display:none" 
+        		data-51000="display:block;transform:translate3d(-100%,0,0)"  
+        		data-58000="transform:translate3d(0%,0,0)">
 				<div class="sprite walkman2"></div>
 			</div>
             <!--            
@@ -344,11 +378,15 @@
         	描述：信息3
         -->
 		<div class="fullpage infomation" 
-			data-76000="transform:translate3d(100%,0%,0)"  
-			data-78000="transform:translate3d(0%,0%,0)" 
-			data-86000="transform:translate3d(0%,0%,0)"  
-			data-90000="transform:translate3d(-100%,0%,0)">
-			<div class="infotop third-info-top">
+			data-0="display:none"
+			data-56000="display:block"  
+		>
+			<div class="infotop third-info-top"
+				data-57000="transform:translate3d(-100%,0%,0)"  
+				data-60000="transform:translate3d(0%,0%,0)" 
+				data-66000="transform:translate3d(0%,0%,0)"  
+				data-69000="transform:translate3d(100%,0%,0)"
+				>
 				<div class="info-left">
 					<div class="circle circle-3">
 					    <div class="pie_left"><div class="left"></div></div>
@@ -360,21 +398,26 @@
 					<img src="img/desk3.png" class="" />
 				</div>
 			</div>
-			<div class="infobottom third-info-bottom">
+			<div class="infobottom third-info-bottom"
+				data-57000="transform:translate3d(100%,0%,0)"  
+				data-60000="transform:translate3d(0%,0%,0)" 
+				data-66000="transform:translate3d(0%,0%,0)"  
+				data-69000="transform:translate3d(-100%,0%,0)"
+				>
 				<div class="fullpage absolute">
 					<img src="img/api.png" class="keyboard-1"/>
 					<img src="img/api.png" class="keyboard-2"/>
 					<img src="img/api.png" class="keyboard-3"/>
 				</div>
 				<div class="info information-5" 
-					data-78000="transform:translate3d(100%,0,0)" 
-					data-81000="transform:translate3d(0%,0,0)">
+					data-60000="transform:translate3d(100%,0,0)" 
+					data-63000="transform:translate3d(0%,0,0)">
 						<p>熟悉原生 DOM 与 BOM 的使用及相关标准（W3C / WHATWG），有桌面 / 移动端前端组件的开发经验</p>						
 				</div>
 				
 				<div class="info information-6" 
-					data-82000="transform:translate3d(100%,0,0)" 
-					data-84000="transform:translate3d(0%,0,0)">											
+					data-63000="transform:translate3d(100%,0,0)" 
+					data-66000="transform:translate3d(0%,0,0)">											
 						<p>对 WebGL / Web Workers / WebSocket / Web Components / SVG 等 API 有一定的使用经验</p>
 				</div>
 			</div>			
@@ -383,16 +426,17 @@
 		<!--        	
         	描述：场景5
         -->
-        <section class="fullpage scence5" 
-        	data-90000="transform:translate3d(100%,0%,0)" 
-        	data-93000="transform:translate3d(0%,0%,0);display:block" 
-        	data-108000 = "display:none">
+        <section class="fullpage scene5" 
+        	data-0="display:none"        	
+        	data-65000 = "display:block"
+        	data-78000 = "display:none"
+        	>
         		<!--            	
             	描述：场景5背景
             -->
             <div class="fullpage overflowhidden absolute">
-				<div class="scence5_bg fullpage" 
-					data-94000="transform:translate3d(0px,0,0)" >
+				<div class="scene5-1 fullpage" 
+					data-66000="transform:translate3d(0px,0,0)" >
 					<img src="img/secene5.png" alt=""  class="background_img"/>
 					<img src="img/deer.gif" class="deer" />
 					<img src="img/leaf1.gif" class="leaf" />
@@ -404,8 +448,8 @@
         	-->
         	<div class="fullpage animatewrap" 
         		data-0="display:none" 
-        		data-94000="display:block;transform:translate3d(-100%,0,0)"  
-        		data-105000="transform:translate3d(0%,0,0)">
+        		data-69000="display:block;transform:translate3d(-100%,0,0)"  
+        		data-76000="transform:translate3d(0%,0,0)">
 				<div class="sprite walkman3"></div>
 			</div>
         </section>
@@ -413,14 +457,15 @@
         	描述：信息4
         -->
 		<div class="fullpage infomation" 
-			data-100000="transform:translate3d(0%,0%,0)" 
-			data-110000="display:block"  
-			data-113000="display:none">
+			data-0="display:none"
+			data-74000="display:block"  
+			data-87000="display:none"
+			>
 			<div class="infotop fourth-info-top" 
-				data-100000="transform:translate3d(-100%,0%,0)" 
-				data-103000="transform:translate3d(0%,0%,0)" 
-				data-110000="transform:translate3d(0%,0%,0)"  
-				data-113000="transform:translate3d(100%,0%,0)">
+				data-75000="transform:translate3d(100%,0%,0)" 
+				data-78000="transform:translate3d(0%,0%,0)" 
+				data-84000="transform:translate3d(0%,0%,0)"  
+				data-87000="transform:translate3d(0%,-100%,0)">
 				<div class="info-left">
 					<div class="circle circle-4">
 					    <div class="pie_left"><div class="left"></div></div>
@@ -433,24 +478,24 @@
 				</div>
 			</div>
 			<div class="infobottom fourth-info-bottom" 
-				data-100000="transform:translate3d(100%,0%,0)" 
-				data-103000="transform:translate3d(0%,0%,0)" 
-				data-110000="transform:translate3d(0%,0%,0)"  
-				data-113000="transform:translate3d(-100%,0%,0)">
+				data-75000="transform:translate3d(-100%,0%,0)" 
+				data-78000="transform:translate3d(0%,0%,0)" 
+				data-84000="transform:translate3d(0%,0%,0)"  
+				data-87000="transform:translate3d(0%,100%,0)">
 				<div class="fullpage absolute">
 					<img src="img/rokect.png" class="keyboard-1"/>
 					<img src="img/rokect.png" class="keyboard-2"/>
 					<img src="img/rokect.png" class="keyboard-3"/>
 				</div>
 				<div class="info information-7" 
-					data-103000="transform:translate3d(100%,0,0)" 
-					data-106000="transform:translate3d(0%,0,0)">
+					data-78000="transform:translate3d(0%,100%,0)" 
+					data-81000="transform:translate3d(0%,0%,0)">
 						<p>能够使用 Node.js API / Express / Koa 搭建简单的后端程序与数据库交互、渲染模板及提供 RESTful API</p>						
 				</div>
 				
 				<div class="info information-8" 
-					data-106000="transform:translate3d(100%,0,0)" 
-					data-109000="transform:translate3d(0%,0,0)">											
+					data-81000="transform:translate3d(0%,100%,0)" 
+					data-84000="transform:translate3d(0%,0%,0)">											
 						<p>了解异步 I/O 及事件驱动的服务器模型，掌握常见的异步编程解决方案</p>
 				</div>
 			</div>			
@@ -459,16 +504,16 @@
         <!--        	
         	描述：场景6
         -->
-        <section class="fullpage scence5" 
-        	data-90000="transform:translate3d(0%,0%,0);display:none" 
-        	data-103000="transform:translate3d(0%,0%,0);display:block"  
-        	data-129000="transform:translate3d(0%,0%,0);display:none">
+        <section class="fullpage scene6" 
+        	data-0="display:none" 
+        	data-83000="display:block"  
+        	data-96000="display:none">
         		<!--            	
             	描述：场景6背景
             -->
             <div class="fullpage overflowhidden absolute">
-				<div class="scence6_bg fullpage" 
-					data-111000="transform:translate3d(0px,0,0)" >
+				<div class="scene6-1 fullpage" 
+					data-84000="transform:translate3d(0px,0,0)" >
 					<img src="img/scene6.jpg" alt=""  class="background_img"/>					
 				</div>
 			</div>
@@ -478,21 +523,24 @@
         	-->
         	<div class="fullpage animatewrap" 
         		data-0="display:none" 
-        		data-111000="display:block;transform:translate3d(-100%,0,0)"  
-        		data-119000="transform:translate3d(0%,0,0)">
+        		data-87000="display:block;transform:translate3d(-100%,0,0)"  
+        		data-94000="transform:translate3d(0%,0,0)">
 				<div class="sprite walkman4"></div>
 			</div>
         </section>
         <!--        	        	
         	描述：信息5
         -->
-		<div class="fullpage infomation" 
-			data-0="display:none" 
-			data-120000="display:block"  
-			data-133000="display:none">
+		<div class="fullpage infomation" 			
+			data-0="display:none"
+			data-92000="display:block"  
+			data-105000="display:none"
+			>
 			<div class="infotop fifth-info-top" 
-				data-120000="transform:translate3d(0%,-100%,0)" 
-				data-123000="transform:translate3d(0%,0%,0)" data-130000="transform:translate3d(0%,0%,0)"  data-133000="transform:translate3d(0%,-100%,0)">
+				data-93000="transform:translate3d(0%,-100%,0)" 
+				data-96000="transform:translate3d(0%,0%,0)" 
+				data-102000="transform:translate3d(0%,0%,0)"  
+				data-105000="transform:translate3d(0%,-100%,0)">
 				<div class="info-left">
 					<div class="circle circle-5">
 					    <div class="pie_left"><div class="left"></div></div>
@@ -505,24 +553,24 @@
 				</div>
 			</div>
 			<div class="infobottom fifth-info-bottom" 
-				data-120000="transform:translate3d(0%,100%,0)" 
-				data-123000="transform:translate3d(0%,0%,0)" 
-				data-130000="transform:translate3d(0%,0%,0)"  
-				data-133000="transform:translate3d(0%,100%,0)">
+				data-93000="transform:translate3d(0%,100%,0)" 
+				data-96000="transform:translate3d(0%,0%,0)" 
+				data-102000="transform:translate3d(0%,0%,0)"  
+				data-105000="transform:translate3d(0%,100%,0)">
 				<div class="fullpage absolute">
 					<img src="img/rokect.png" class="keyboard-1"/>
 					<img src="img/rokect.png" class="keyboard-2"/>
 					<img src="img/rokect.png" class="keyboard-3"/>
 				</div>
 				<div class="info information-9" 
-					data-123000="transform:translate3d(100%,0,0)" 
-					data-126000="transform:translate3d(0%,0,0)">
+					data-96000="transform:translate3d(100%,0,0)" 
+					data-99000="transform:translate3d(0%,0,0)">
 						<p>熟悉 Python，能实现简单的数据及图像处理工具、自动化脚本、爬虫、机器学习算法及分布式程序（参见 GitHub）</p>						
 				</div>
 				
 				<div class="info information-10" 
-					data-126000="transform:translate3d(100%,0,0)" 
-					data-129000="transform:translate3d(0%,0,0)">											
+					data-99000="transform:translate3d(100%,0,0)" 
+					data-102000="transform:translate3d(0%,0,0)">											
 						<p>日常使用 Git 与 Sublime Text / Vim 进行开发，也乐于尝试新工具</p>
 				</div>
 			</div>			
@@ -530,33 +578,32 @@
         <!--        	
         	描述：end
         -->
-      	<div class="fullpage" 
-      		data-0="display:none" 
-      		data-129000 = "display:block">       			      	
+      	<div class="fullpage end displaynone" 
+       		data-0="display:none"
+      		data-101000 = "display:block">       			      	
 	      		<div class="end_bottom fullpage"></div>
 	      		<img src="img/end.gif" class="end_pic"/>	      		
 				<div class="end_wrap fullpage" 
-					data-133000 ="opacity:0" 
-					data-134000="opacity:0.4"></div>
+					data-105000 ="opacity:0" 
+					data-106000="opacity:0.4"></div>
 				<div class="fullpage" 
 					data-0="transform:translate3d(-100%,0%,0);display:none" 
-					data-134000="transform:translate3d(0%,-100%,0);display:block" 
-					data-135000="transform:translate3d(0%,0%,0);display:block">
+					data-106000="transform:translate3d(0%,-100%,0);display:block" 
+					data-108000="transform:translate3d(0%,0%,0);display:block">
 					<img src="img/mycard.png" class="mycard" />
 				</div>
 				<div class="fullpage"
-					data-135000="opacity:0"
-					data-135500="opacity:0.5"
+					data-107000="opacity:0"
+					data-108000="opacity:0.5"
 					>
 					><div class="over">完</div></div>	
 				
       	</div>
-        <script type="text/javascript" src="js/IMG.js" ></script>
-        <script type="text/javascript" src="js/preload.js" ></script>
+		
 		<script type="text/javascript" src="js/skrollr.js" ></script>
 		<script type="text/javascript" src="js/zepto_1.1.3.js" ></script>
+		<script type="text/javascript" src="js/imageload.js" ></script>
 		<script type="text/javascript" src="js/ratio.js" ></script>
-		<script type="text/javascript" src="js/mousemove.js" ></script>
 		<script type="text/javascript" src="js/star.js" ></script>
 		<script type="text/javascript" src="js/spaceinit.js" ></script>
 		<script type="text/javascript" src="js/animation.js" ></script>
