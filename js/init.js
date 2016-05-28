@@ -80,8 +80,8 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
         					$.plug.circleprogress('.circle-4',num);
         				}
         				//console.log(data.curTop);
-        				
-        				if(datatop>10000&&aniflag){
+        				//datatop>10000
+        				if(aniflag){
         					touch_animate();
         					aniflag=false
         				}
@@ -121,6 +121,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 //					if(!marine.animating()){marine.resume();}
 //					pre_num=num_for_scroll;
 //				});
+
 				function ani_resume(){
 						if(datatop>10100 && datatop<=22000){
 						Walkman1.resume();
@@ -131,6 +132,18 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 					if(datatop>94000 && datatop<=110000){
 						Walkman3.resume();
 					}
+					Walkman4.resume();
+				}
+						function ani_resume(){
+					 
+						Walkman1.resume();
+			 
+			 
+						Walkman2.resume();
+					 
+				 
+						Walkman3.resume();
+			 
 					Walkman4.resume();
 				}
 				function ani_stop(){
@@ -145,7 +158,18 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 					}
 					Walkman4.stop();
 				}
-				
+							function ani_stop(){
+			 
+						Walkman1.stop();
+			 
+			 
+						Walkman2.stop();
+			 
+			 
+						Walkman3.stop();
+			 
+					Walkman4.stop();
+				}
 				function touch_animate(){
 					$(document).on("touchstart",ani_resume);
 					$(document).on("touchend",ani_stop);					
