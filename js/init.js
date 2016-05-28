@@ -25,6 +25,10 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 			 	$.plug.background(false,".scene4-2",62000,$.plug.ratio(false,2560,1496,".scene4-2"));
 			 	$.plug.background(false,".scene5-1",76000,$.plug.ratio(false,2857,1216,".scene5-1"));
 			 	$.plug.background(false,".scene6-1",94000,$.plug.ratio(false,800,800,".scene6-1"));
+			 	$.plug.background(true,	".scenev-1-1",94000,$.plug.ratio(true,600,1200,".scenev-1-1"));
+			 	$.plug.background(true,	".scenev-1-2",98000,$.plug.ratio(true,600,1200,".scenev-1-2"));
+			 	$.plug.background(true,	".scenev-1-3",102000,$.plug.ratio(true,600,1200,".scenev-1-3"));
+			 	
 			 	var datatop;
 			 	var aniflag=true;
 			 	s= skrollr.init({					

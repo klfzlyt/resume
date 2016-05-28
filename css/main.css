@@ -122,7 +122,10 @@ html,body{
 
   
 .z-2{
-	z-index: 2;
+	z-index: 2 !important;
+}
+.z-3{
+	z-index: 3 !important;	
 }
 .z-100{
 	z-index: 100;
@@ -215,7 +218,10 @@ opacity: 0;
 .star3_bg{
 	background: url(../img/star_big.png);
 }
-
+.infobottom span{
+	width: 50px;
+	height: 50px;
+}
 .arrow{
 	position: absolute;
 	left: 0;
@@ -919,6 +925,22 @@ animation-direction:alternate;
 	left: 90%;
 	bottom: 16%;
 	z-index: 4;
+}
+
+/*scene6*/
+.parachute{
+	height: 150px;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+}
+.satellite{
+	width: 400px;
+		display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 /*end*/
 .end{
