@@ -24,7 +24,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 			 	$.plug.background(false,".scene4-1",58000,$.plug.ratio(false,2560,1496,".scene4-1"));
 			 	$.plug.background(false,".scene4-2",62000,$.plug.ratio(false,2560,1496,".scene4-2"));
 			 	$.plug.background(false,".scene5-1",76000,$.plug.ratio(false,2857,1216,".scene5-1"));
-			 	$.plug.background(false,".scene6-1",94000,$.plug.ratio(false,800,800,".scene6-1"));
+			 	$.plug.background(false,".scene6-1",112000,$.plug.ratio(false,800,800,".scene6-1"));
 			 	$.plug.background(true,	".scenev-1-1",94000,$.plug.ratio(true,600,1200,".scenev-1-1"));
 			 	$.plug.background(true,	".scenev-1-2",98000,$.plug.ratio(true,600,1200,".scenev-1-2"));
 			 	$.plug.background(true,	".scenev-1-3",102000,$.plug.ratio(true,600,1200,".scenev-1-3"));
@@ -40,7 +40,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 //      						$(hided_element[i]).hide();
 //      					}
 //      					if(name==="data8000"&&direction==="up"){
-//      						$(hided_element[i]).show();
+//      		r				$(hided_element[i]).show();
 //      					}
 //      				}
 //      			
@@ -52,32 +52,39 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
         				//25000------90
         				//cirlce-1
         				datatop=data.curTop;
-        				if(data.curTop>=23000 && data.curTop<25000){
-        					var num=Math.round((data.curTop-23000)/22);
+        				if(data.curTop>=20000 && data.curTop<25000){
+        					var num=Math.round((data.curTop-20000)/55);
         					$('.circle-1').find('span.value').text(num);
         					$.plug.circleprogress('.circle-1',num);
         				}
         				
         				
         				//cirlce-2
-        				if(data.curTop>=46000 && data.curTop<54000){
-        					var num=Math.round((data.curTop-46000)/133);
+        				if(data.curTop>=42000 && data.curTop<47000){
+        					var num=Math.round((data.curTop-42000)/62);
         					$('.circle-2').find('span.value').text(num);
         					$.plug.circleprogress('.circle-2',num);
         				}
         				
         				
         				//cirlce-3
-        				if(data.curTop>=78000 && data.curTop<84000){
-        					var num=Math.round((data.curTop-78000)/75);
+        				if(data.curTop>=60000 && data.curTop<65000){
+        					var num=Math.round((data.curTop-60000)/59);
         					$('.circle-3').find('span.value').text(num);
         					$.plug.circleprogress('.circle-3',num);
         				}	
         				//cirlce-4
-        				if(data.curTop>=103000 && data.curTop<109000){
-        					var num=Math.round((data.curTop-103000)/133);
+        				if(data.curTop>=78000 && data.curTop<83000){
+        					var num=Math.round((data.curTop-78000)/62);
         					$('.circle-4').find('span.value').text(num);
         					$.plug.circleprogress('.circle-4',num);
+        				}
+        				
+        							//cirlce-5
+        				if(data.curTop>=96000 && data.curTop<101000){
+        					var num=Math.round((data.curTop-96000)/63);
+        					$('.circle-5').find('span.value').text(num);
+        					$.plug.circleprogress('.circle-5',num);
         				}
         				//console.log(data.curTop);
         				//datatop>10000
@@ -112,7 +119,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 			 	var Walkman1=$.plug.animate(900,".walkman1",36,-122,19);
    				var Walkman2=$.plug.animate(1500,".walkman2",36,-80,19);
 				var Walkman3=$.plug.animate(1500,".walkman3",26,-94,19);
-				var Walkman4=$.plug.animate(1500,".walkman4",20,-206,19);
+				var Walkman4=$.plug.animate(1500,".walkman4",20,-172,20);
 //				setInterval(function(){
 //					if(num_for_scroll===pre_num)marine.stop();
 //				},1500);
@@ -123,53 +130,57 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 //				});
 
 				function ani_resume(){
-						if(datatop>10100 && datatop<=22000){
+						if(datatop>9100 && datatop<=18000){
 						Walkman1.resume();
 					}
-					if(datatop>67000 && datatop<=76000){
+					if(datatop>51000 && datatop<=58000){
 						Walkman2.resume();
 					}
-					if(datatop>94000 && datatop<=110000){
+					if(datatop>69000 && datatop<=76000){
 						Walkman3.resume();
 					}
+						if(datatop>103000 && datatop<=110000){
 					Walkman4.resume();
+					}
 				}
-						function ani_resume(){
-					 
-						Walkman1.resume();
-			 
-			 
-						Walkman2.resume();
-					 
-				 
-						Walkman3.resume();
-			 
-					Walkman4.resume();
-				}
+//						function ani_resume(){
+//					 
+//						Walkman1.resume();
+//			 
+//			 
+//						Walkman2.resume();
+//					 
+//				 
+//						Walkman3.resume();
+//			 
+//					Walkman4.resume();
+//				}
 				function ani_stop(){
-					if(datatop>10100 && datatop<=22000){
+					if(datatop>9100 && datatop<=18000){
 						Walkman1.stop();
 					}
-					if(datatop>67000 && datatop<=76000){
+					if(datatop>51000 && datatop<=58000){
 						Walkman2.stop();
 					}
-					if(datatop>94000 && datatop<=110000){
+					if(datatop>69000 && datatop<=76000){
 						Walkman3.stop();
 					}
+						if(datatop>103000 && datatop<=110000){
 					Walkman4.stop();
 				}
-							function ani_stop(){
-			 
-						Walkman1.stop();
-			 
-			 
-						Walkman2.stop();
-			 
-			 
-						Walkman3.stop();
-			 
-					Walkman4.stop();
-				}
+					}
+//							function ani_stop(){
+//			 
+//						Walkman1.stop();
+//			 
+//			 
+//						Walkman2.stop();
+//			 
+//			 
+//						Walkman3.stop();
+//			 
+//					Walkman4.stop();
+//				}
 				function touch_animate(){
 					$(document).on("touchstart",ani_resume);
 					$(document).on("touchend",ani_stop);					
@@ -223,14 +234,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 //			 	});
 			 	$.plug.star({
 			 		container:document.querySelector('.star_container'),
-					bigstar:{
-						src:"./img/star_big.png",
-						number:5
-					},
-					midstar:{
-						src:"./img/star_mid.png",
-						number:10
-					}
+		 
 			 	});
            	 $('.loding').hide();         
           

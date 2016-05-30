@@ -5,52 +5,43 @@ html,body{
 	height: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	font-size: 20px;
+	font-size: 18px;
 	
 }
 *{margin: 0;padding: 0;list-style: none;}
-/*
-KISSY CSS Reset
-鐞嗗康锛?. reset 鐨勭洰鐨勪笉鏄竻闄ゆ祻瑙堝櫒鐨勯粯璁ゆ牱寮忥紝杩欎粎鏄儴鍒嗗伐浣溿€傛竻闄ゅ拰閲嶇疆鏄揣瀵嗕笉鍙垎鐨勩€?2. reset 鐨勭洰鐨勪笉鏄榛樿鏍峰紡鍦ㄦ墍鏈夋祻瑙堝櫒涓嬩竴鑷达紝鑰屾槸鍑忓皯榛樿鏍峰紡鏈夊彲鑳藉甫鏉ョ殑闂銆?3. reset 鏈熸湜鎻愪緵涓€濂楁櫘閫傞€氱敤鐨勫熀纭€鏍峰紡銆備絾娌℃湁閾跺脊锛屾帹鑽愭牴鎹叿浣撻渶姹傦紝瑁佸壀鍜屼慨鏀瑰悗鍐嶄娇鐢ㄣ€?鐗硅壊锛?. 閫傚簲涓枃锛?. 鍩轰簬鏈€鏂颁富娴佹祻瑙堝櫒銆?缁存姢锛氱帀浼?lifesinger@gmail.com>, 姝ｆ烦<ragecarrier@gmail.com>
- */
 
-/** 娓呴櫎鍐呭杈硅窛 **/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 缁撴瀯鍏冪礌 */
-dl, dt, dd, ul, ol, li, /* list elements 鍒楄〃鍏冪礌 */
-pre, /* text formatting elements 鏂囨湰鏍煎紡鍏冪礌 */
-form, fieldset, legend, button, input, textarea, /* form elements 琛ㄥ崟鍏冪礌 */
-th, td /* table elements 琛ㄦ牸鍏冪礌 */ {
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, 
+dl, dt, dd, ul, ol, li, 
+pre, 
+form, fieldset, legend, button, input, textarea, 
+th, td {
   margin: 0;
   padding: 0;
 }
 
-/** 璁剧疆榛樿瀛椾綋 **/
+
 button, input, select, textarea /* for ie */ {
   font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 { font-size: 100%; }
-address, cite, dfn, em, var { font-style: normal; } /* 灏嗘枩浣撴壎姝?*/
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 缁熶竴绛夊瀛椾綋 */
-small { font-size: 12px; } /* 灏忎簬 12px 鐨勪腑鏂囧緢闅鹃槄璇伙紝璁?small 姝ｅ父鍖?*/
+address, cite, dfn, em, var { font-style: normal; } 
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } 
+small { font-size: 12px; } 
 
-/** 閲嶇疆鍒楄〃鍏冪礌 **/
+
 ul, ol { list-style: none; }
 
-/** 閲嶇疆鏂囨湰鏍煎紡鍏冪礌 **/
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 
-/** 閲嶇疆琛ㄥ崟鍏冪礌 **/
-legend { color: #000; } /* for ie6 */
-fieldset, img { border: 0; } /* img 鎼溅锛氳閾炬帴閲岀殑 img 鏃犺竟妗?*/
-button, input, select, textarea { font-size: 100%; } /* 浣垮緱琛ㄥ崟鍏冪礌鍦?ie 涓嬭兘缁ф壙瀛椾綋澶у皬 */
-/* 娉細optgroup 鏃犳硶鎵舵 */
 
-/** 閲嶇疆琛ㄦ牸鍏冪礌 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } 
+button, input, select, textarea { font-size: 100%; } 
+
 table { border-collapse: collapse; border-spacing: 0; }
 
-/* 娓呴櫎娴姩 */
 .ks-clear:after, .clear:after {
   content: '\20';
   display: block;
@@ -344,17 +335,24 @@ opacity: 0;
     transform-origin: bottom right;
     -webkit-transform-origin:bottom right;
 }
-.awardsright h4{
+.awardsright h3{
 	position: absolute;
-	bottom:0;
+	bottom:10px;
 	left: 40%;
+}
+.awardsright img{
+	width:75px;
 }
 .awardsleft h3{
 	position: absolute;
-	bottom:0;
+	bottom:10px;
 	left: 30%;
 }
- 
+.awardsleft img{
+	width: 50px;
+	 
+	border-radius: 50%;
+}
 .background_img{
 	 min-height: 100%;
  min-width: 100%;
@@ -376,13 +374,44 @@ opacity: 0;
 	}
 }
 .star_container{
-	height: 60%;
+	height: 50% !important; 
 }
-.star{
+.star1{
 	position: absolute;	
+	height: 5px;
+	width: 5px;
+	background: #FFFFFF;
 }
-
-
+.star2{
+	position: absolute;	
+	height: 3px;
+	width: 3px;
+	background: #FFFFFF;
+}
+@-webkit-keyframes rotatestar{
+	from{
+		-webkit-transform: rotate(0deg) translateZ(0);
+	}
+	to{
+		-webkit-transform: rotate(360deg) translateZ(0);
+	}
+}
+@-moz-keyframes rotatestar{
+	from{
+		-moz-transform: rotate(0deg) translateZ(0);
+	}
+	to{
+		-moz-transform: rotate(360deg) translateZ(0);
+	}
+}
+@keyframes rotatestar{
+	from{
+		transform: rotate(0deg) translateZ(0);
+	}
+	to{
+		transform: rotate(360deg) translateZ(0);
+	}
+}
 @-webkit-keyframes twinkle{
 	from{
 		opacity: 0;
@@ -406,6 +435,12 @@ opacity: 0;
 	to{
 		opacity: 1;
 	}
+}
+.star_rotate{
+	animation: rotatestar 1.1s infinite linear;
+-webkit-animation:  rotatestar 1.1s infinite linear;
+-moz-animation:  rotatestar 1.1s infinite linear;
+ 
 }
 .star_twinkle{
 animation: twinkle 1.1s infinite;
@@ -667,7 +702,12 @@ animation-direction:alternate;
 	height: 400px;
 	position: absolute;
 	z-index: 3 !important;
-	top:0%
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	margin: auto;
+	
 }
 .ballon3{
 	display: block;
@@ -713,11 +753,11 @@ animation-direction:alternate;
 }
 .walkman4{
 	bottom: 16% !important;
-	width: 180px;
-	height: 168px;
+	width: 160px;
+	height: 140px;
 	/*4109*168*/
 	background: url(../img/walk4_20f.png) no-repeat 0px 0px;
-	background-size: 4109px 100%;
+	background-size: 3424px 100%;
 }
 .character{
 	background-size: 100% 100%;
@@ -840,9 +880,7 @@ animation-direction:alternate;
 	-webkit-opacity: 0.21;
 	-moz-opacity: 0.21;
 }
-.info-left{
-	overflow: hidden;
-}
+
 .infotop .info-right div{
 	height: 100%;
 	width: 50%;
@@ -866,7 +904,9 @@ animation-direction:alternate;
 	display: block;
 	height: 100%;
 	position: relative;
-	
+	overflow: hidden;
+	box-sizing: border-box;
+
 }
 .info-right{
 	float: right;
@@ -875,7 +915,8 @@ animation-direction:alternate;
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-	
+		border-left: 2px solid rgba(0,0,0,0.1);
+		box-sizing: border-box;
 }
 .info{
 	width: 100%;
@@ -897,12 +938,12 @@ animation-direction:alternate;
 	border-top: 2px solid #FFFFFF;
 }
 .information-3{
-	color: #000;
+	color: #FFFFFF;
 	
 }
 .information-4{
-	color: #000;
-	border-top: 2px solid #000;
+	color: #fff;
+	border-top: 2px solid #fff;
 	top:50%;
 	
 }
@@ -1027,10 +1068,14 @@ animation-direction:alternate;
 
 .mycard{
 	width: 80%;
-	left: 10%;
+	left:0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	margin: auto;
 	display: block;
 	position: absolute;
-	top: 15%;
+
 }
 .over{
 	position: absolute;

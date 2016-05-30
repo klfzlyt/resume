@@ -3,18 +3,18 @@
 	
 	var param=$.extend({
 		classname:"star",
-		twinklename:"star_twinkle",
+		twinklename:"star_rotate",
 		bigstar:{
 			src:"./img/star_big.png",
 			number:30
 		},
 		midstar:{
 			src:"./img/star_mid.png",
-			number:30
+			number:20
 		},
 		smallstar:{
 			src:"./img/star_tiny.png",
-			number:30
+			number:10
 		}
 		
 	},setting);
@@ -28,21 +28,21 @@
 	var container_size=$(container);//container.getBoundingClientRect();
 	var class_name=param.classname;
 	var move_arr=[];
-	function generate_star(star){		
+	function generate_star(star,name){		
 		for(var i=0;i<star.number;i++){
 			var random_width=Math.round(Math.random()*container_size.width());
 			var random_height=Math.round(Math.random()*container_size.height());
-			var $img=$("<img/>").attr("src",star.src).attr('width',"20px");
-			var $star=$('<div></div>').addClass(class_name).append($img).appendTo($(container));
-			if(i%5===0)$star.addClass(twinkle);
+			 
+			var $star=$('<div></div>').addClass(name).appendTo($(container));
+			$star.addClass(twinkle);
 			$star.get(0).style.left=random_width+"px";
 			$star.get(0).style.top=random_height+"px";			
 			move_arr.push($star.get(0));
 		}				
 	}
-	generate_star(smallstar);
-	generate_star(midstar);
-	generate_star(bigstar);
+	generate_star(smallstar,"star1");
+	generate_star(midstar,"star2");
+	//generate_star(bigstar);
 	return move_arr;
 	
 	}
