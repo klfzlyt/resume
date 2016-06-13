@@ -163,7 +163,7 @@ table { border-collapse: collapse; border-spacing: 0; }
   }
 }
 
-  
+ /*helper*/
 .z-2{
 	z-index: 2 !important;
 }

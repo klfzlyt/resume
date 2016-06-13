@@ -1,20 +1,5 @@
 var imgLoad=imagesLoaded("div",{ background: true }, function() {
-  // images have loaded
-       			
-           			 console.log("done");
-           			 
-       
-			 
-			 
-			 
-			 
-			 
-			 	
-			 	
-			 
-			 
-			 
-			 		 	
+ 				//before skrollr set the size and keyframe
 			 	//背景偏移生成，动态得到大图片偏移
 			 	$.plug.background(true,".scene1-1",6700,$.plug.ratio(true,1080,1920,".scene1-1"));
 			 	$.plug.background(false,".scene2-1",18000,$.plug.ratio(false,4500,1667,".scene2-1"));
@@ -29,23 +14,11 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 			 	$.plug.background(true,	".scenev-1-2",98000,$.plug.ratio(true,600,1200,".scenev-1-2"));
 			 	$.plug.background(true,	".scenev-1-3",102000,$.plug.ratio(true,600,1200,".scenev-1-3"));
 			 	
+			 	
+			 	//init the skrollr
 			 	var datatop;
 			 	var aniflag=true;
-			 	s= skrollr.init({					
-//				keyframe: function(element, name, direction) {
-//      			console.log(name,direction)
-//      			
-//      				for(var i=0;i<hided_element.length;i++){
-//      					if(name==="data8000"&&direction==="down"){
-//      						$(hided_element[i]).hide();
-//      					}
-//      					if(name==="data8000"&&direction==="up"){
-//      		r				$(hided_element[i]).show();
-//      					}
-//      				}
-//      			
-//      			
-//  			},
+			 	s= skrollr.init({
     			  render: function(data) {
         				//Log the current scroll position.
         				//23000------0
@@ -56,16 +29,13 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
         					var num=Math.round((data.curTop-20000)/55);
         					$('.circle-1').find('span.value').text(num);
         					$.plug.circleprogress('.circle-1',num);
-        				}
-        				
-        				
+        				}        				        				
         				//cirlce-2
         				if(data.curTop>=42000 && data.curTop<47000){
         					var num=Math.round((data.curTop-42000)/62);
         					$('.circle-2').find('span.value').text(num);
         					$.plug.circleprogress('.circle-2',num);
-        				}
-        				
+        				}        				
         				
         				//cirlce-3
         				if(data.curTop>=60000 && data.curTop<65000){
@@ -80,55 +50,30 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
         					$.plug.circleprogress('.circle-4',num);
         				}
         				
-        							//cirlce-5
+        				//cirlce-5
         				if(data.curTop>=96000 && data.curTop<101000){
         					var num=Math.round((data.curTop-96000)/63);
         					$('.circle-5').find('span.value').text(num);
         					$.plug.circleprogress('.circle-5',num);
         				}
-        				//console.log(data.curTop);
-        				//datatop>10000
         				if(aniflag){
         					touch_animate();
         					aniflag=false
-        				}
-        				
-        				
+        				}        				        			
     				},
     				mobileDeceleration:0.004,
-    				smoothScrolling:true
-    				
-    				
+    				smoothScrolling:true    				    				
 			});
 			 	
 			 	
 			 	
 		
 			 	
-			 	//
-			 	var hided_element=['.star_container','.hello_world'];
-			 	
-			 	
-			 	
-			 	
-			 	//$.plug.circleprogress('.circle',22);
-			 	/*
-			 	 * animation
-			 	 * totaltime,dom,parts,interval,stopframe
-			 	 */
+				//spritesheet 
 			 	var Walkman1=$.plug.animate(900,".walkman1",36,-122,19);
-   				var Walkman2=$.plug.animate(1500,".walkman2",36,-80,19);
+   			var Walkman2=$.plug.animate(1500,".walkman2",36,-80,19);
 				var Walkman3=$.plug.animate(1500,".walkman3",26,-94,19);
 				var Walkman4=$.plug.animate(1500,".walkman4",20,-172,20);
-//				setInterval(function(){
-//					if(num_for_scroll===pre_num)marine.stop();
-//				},1500);
-//				$(document).bind("scroll",function(){
-//					num_for_scroll++;
-//					if(!marine.animating()){marine.resume();}
-//					pre_num=num_for_scroll;
-//				});
-
 				function ani_resume(){
 						if(datatop>9100 && datatop<=18000){
 						Walkman1.resume();
@@ -143,18 +88,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 					Walkman4.resume();
 					}
 				}
-//						function ani_resume(){
-//					 
-//						Walkman1.resume();
-//			 
-//			 
-//						Walkman2.resume();
-//					 
-//				 
-//						Walkman3.resume();
-//			 
-//					Walkman4.resume();
-//				}
+
 				function ani_stop(){
 					if(datatop>9100 && datatop<=18000){
 						Walkman1.stop();
@@ -168,19 +102,7 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 						if(datatop>103000 && datatop<=110000){
 					Walkman4.stop();
 				}
-					}
-//							function ani_stop(){
-//			 
-//						Walkman1.stop();
-//			 
-//			 
-//						Walkman2.stop();
-//			 
-//			 
-//						Walkman3.stop();
-//			 
-//					Walkman4.stop();
-//				}
+				}
 				function touch_animate(){
 					$(document).on("touchstart",ani_resume);
 					$(document).on("touchend",ani_stop);					
@@ -191,58 +113,16 @@ var imgLoad=imagesLoaded("div",{ background: true }, function() {
 					$(document).off("touchend",ani_stop);					
 					$(document).off("touchmove",ani_resume);
 				}
-			 	
-			 	
-			 	//end of animation
-     
-			
-//			 if(s.isMobile()){
-			 
-//			 	$.plug.star({
-//			 		container:document.querySelector('.star_container'),
-//					bigstar:{
-//						src:"./img/star_big.png",
-//						number:10
-//					},
-//					midstar:{
-//						src:"./img/star_mid.png",
-//						number:20
-//					}
-//			 	});
-//			 }
-//			 else{
-			 	//$.plug.ratio(false,2560,1600,".star_planet",1.3)
-//			 	var stars=$.plug.star({container:document.querySelector('.star_container')});
-//			 	$.plug.reversemove({
-//			 		dom:stars,
-//			 		istranlate:true
-//			 	});
-//			 	$.plug.reversemove({
-//			 		dom:".star_planet",
-//			 		istranlate:true,
-//			 		ratio:1,
-//			 		background_position:true,
-//			 		domrange:50
-//			 	})
-//			 }	 
-			    			 
-//         		$.plug.spaceship({
-//			 	container:document.querySelector('.spaceship'),
-//			 	data_begin:3500,
-//			 	data_end:4500,
-//			 	speen:80
-//			 	});
+				
+				
+				//star
 			 	$.plug.star({
-			 		container:document.querySelector('.star_container'),
-		 
+			 		container:document.querySelector('.star_container'),	 
 			 	});
-           	 $('.loding').hide();         
-          
+			 	
+			 //loaded	
+       $('.loding').hide();          
 			 $(".scene1").css("opacity","1");           			 
            			 
            			 
-});
-imgLoad.on( 'progress', function( instance, image ) {
-  var result = image.isLoaded ? 'loaded' : 'broken';
-  console.log( 'image is ' + result + ' for ' + image.img.src );
 });
